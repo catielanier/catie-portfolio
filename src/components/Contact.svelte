@@ -28,7 +28,7 @@
 						</a>
 					</div>
 					<div>
-						<a href="https://twitter.com/claniernsj" target="_blank">
+						<a href="https://twitter.com/catie_codes" target="_blank">
 							<img src="assets/twitter.png" alt="Twitter" />
 						</a>
 					</div>
