@@ -10,7 +10,7 @@
 			<li key={post._id}>
 				<span>
 					<a
-						href={`https://blog.coreylanier.com/post/${post._id}`}
+						href={`https://blog.catielanier.ca/post/${post._id}`}
 						target="_blank"
 					>
 						<span class="link">{post.title}</span>
@@ -19,7 +19,7 @@
 			</li>
 		{/each}
 	</ul>
-	<a href="https://blog.coreylanier.com" target="_blank" class="button">
+	<a href="https://blog.catielanier.ca" target="_blank" class="button">
 		<span />
 		<span />
 		<span />
@@ -34,7 +34,7 @@
 		list-style-position: outside;
 		font-family: "Neuton", serif;
 		font-size: 2.7rem;
-		color: #b3cde0;
+		color: #e0b3cd;
 		padding-bottom: 25px;
 	}
 	li > span {
@@ -43,14 +43,14 @@
 	}
 	li > span a {
 		text-decoration: underline;
-		color: #0557a3;
+		color: #a30557;
 	}
 	li span.link {
 		color: white;
 		transition: all 0.3s ease-in-out;
 	}
 	li > span a:hover span.link {
-		color: #0557a3;
+		color: #a30557;
 	}
 
 	a.button {
