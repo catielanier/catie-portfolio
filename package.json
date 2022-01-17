@@ -1,5 +1,5 @@
 {
-  "name": "corey-lanier-portfolio",
+  "name": "catie-lanier-portfolio",
   "version": "2.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -22,8 +22,8 @@
     "typed.js": "^2.0.11"
   },
   "now": {
-    "alias": "corey-lanier-portfolio",
-    "name": "corey-lanier-portfolio",
+    "alias": "catie-lanier-portfolio",
+    "name": "catie-lanier-portfolio",
     "routes": [
       {
         "src": "/",
