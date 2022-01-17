@@ -14,7 +14,7 @@
 	</p>
 	<div class="grid-container">
 		<div>
-			<p class="email">Email: iam@coreylanier.com</p>
+			<p class="email">Email: hello@catielanier.ca</p>
 			<div class="contact-gap">
 				<div>
 					<a href="https://github.com/lanierc" target="_blank">
@@ -98,18 +98,18 @@
 	input,
 	textarea {
 		width: 100%;
-		background: #252835;
+		background: #352528;
 		color: #fff;
 		border: 0;
 		border-radius: 5px;
-		border-bottom: 2px solid #0557a3;
+		border-bottom: 2px solid #a30557;
 		font-family: "Arvo", serif;
 		font-size: 1.8rem;
 		transition: 0.5 all ease-in-out;
 	}
 	input:focus,
 	textarea:focus {
-		border-bottom: 2px solid #b3cde0;
+		border-bottom: 2px solid #e0b3cd;
 	}
 	input::placeholder,
 	textarea::placeholder {
@@ -121,7 +121,7 @@
 		display: inline-block;
 		padding: 25px 30px;
 		margin: 40px 0;
-		color: #b3cde0;
+		color: #e0b3cd;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: 0.5s;
@@ -131,17 +131,17 @@
 		font-family: "Comfortaa", serif;
 		font-size: 1.6rem;
 		border: 0;
-		background: #252835;
+		background: #352528;
 		font-weight: bold;
 		border-radius: 0;
 	}
 
 	button:hover {
-		background: #b3cde0;
+		background: #e0b3cd;
 		color: #252835;
-		box-shadow: 0 0 5px #b3cde0, 0 0 25px #b3cde0, 0 0 50px #b3cde0,
-			0 0 200px #b3cde0;
-		-webkit-box-reflect: below 1px linear-gradient(transparent, #252835);
+		box-shadow: 0 0 5px #e0b3cd, 0 0 25px #e0b3cd, 0 0 50px #e0b3cd,
+			0 0 200px #e0b3cd;
+		-webkit-box-reflect: below 1px linear-gradient(transparent, #352528);
 	}
 
 	button span {
@@ -154,7 +154,7 @@
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background: linear-gradient(90deg, transparent, #b3cde0);
+		background: linear-gradient(90deg, transparent, #e0b3cd);
 		animation: animate1 1s linear infinite;
 	}
 	@keyframes animate1 {
@@ -171,7 +171,7 @@
 		right: 0;
 		width: 2px;
 		height: 100%;
-		background: linear-gradient(180deg, transparent, #b3cde0);
+		background: linear-gradient(180deg, transparent, #e0b3cd);
 		animation: animate2 1s linear infinite;
 		animation-delay: 0.25s;
 	}
@@ -189,7 +189,7 @@
 		right: 0;
 		width: 100%;
 		height: 2px;
-		background: linear-gradient(270deg, transparent, #b3cde0);
+		background: linear-gradient(270deg, transparent, #e0b3cd);
 		animation: animate3 1s linear infinite;
 		animation-delay: 0.5s;
 	}
@@ -208,7 +208,7 @@
 		left: 0;
 		width: 2px;
 		height: 100%;
-		background: linear-gradient(360deg, transparent, #b3cde0);
+		background: linear-gradient(360deg, transparent, #e0b3cd);
 		animation: animate4 1s linear infinite;
 		animation-delay: 0.75s;
 	}

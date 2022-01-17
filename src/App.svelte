@@ -32,6 +32,22 @@
 	});
 </script>
 
+<div class="container">
+	<MenuBar />
+	<Header />
+	<main>
+		<div class="divider div-transparent" id="skills" />
+		<Skills />
+		<div class="divider div-transparent" id="portfolio" />
+		<Portfolio />
+		<div class="divider div-transparent" id="blog" />
+		<Blog {posts} />
+		<div class="divider div-transparent" id="contact" />
+		<Contact {ip} {block} />
+	</main>
+</div>
+<Footer />
+
 <style>
 	.container {
 		width: 100%;
@@ -55,7 +71,7 @@
 		background-image: linear-gradient(
 			to right,
 			transparent,
-			rgb(179, 205, 224),
+			rgb(224, 179, 205),
 			transparent
 		);
 	}
@@ -66,19 +82,3 @@
 		}
 	}
 </style>
-
-<div class="container">
-	<MenuBar />
-	<Header />
-	<main>
-		<div class="divider div-transparent" id="skills" />
-		<Skills />
-		<div class="divider div-transparent" id="portfolio" />
-		<Portfolio />
-		<div class="divider div-transparent" id="blog" />
-		<Blog {posts} />
-		<div class="divider div-transparent" id="contact" />
-		<Contact {ip} {block} />
-	</main>
-</div>
-<Footer />

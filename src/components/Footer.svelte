@@ -1,6 +1,6 @@
 <div class="footer-container">
 	<footer>
-		<div class="copyright">© 2020-2022 Corey Lanier, all rights reserved.</div>
+		<div class="copyright">© 2020-2022 Catie Lanier, all rights reserved.</div>
 		<div class="framework">
 			Created using
 			<a href="https://svelte.dev" target="_blank">
@@ -18,10 +18,10 @@
 		margin: 40px auto 0;
 		width: 100%;
 		max-width: 1280px;
-		background: #b3cde0;
+		background: #e0b3cd;
 		font-family: "Neuton", sans-serif;
 		font-weight: 700;
-		color: #252835;
+		color: #352528;
 		font-size: 2rem;
 		border-radius: 5px;
 		padding: 5px 10px 11.5px;
@@ -34,7 +34,7 @@
 	}
 
 	a {
-		color: #252835;
+		color: #352528;
 		text-decoration: underline;
 	}
 

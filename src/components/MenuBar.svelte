@@ -17,6 +17,35 @@
 	};
 </script>
 
+<div>
+	<a href="#" class="menu" on:click={showMenuWithoutAnchor}>
+		<img src="assets/menu.png" alt="Menu" />
+	</a>
+</div>
+<nav>
+	<ul>
+		{#each navBarItems as item, index}
+			<a href={item.location} key={index}>
+				<li>{item.label}</li>
+			</a>
+		{/each}
+	</ul>
+</nav>
+<div class={!menu ? "mobile-menu" : "mobile-menu show"}>
+	<div class="close-menu">
+		<a href="#" on:click={showMenuWithoutAnchor}>
+			<img src="assets/x.png" alt="Close Menu" />
+		</a>
+	</div>
+	<div class="flex-container">
+		{#each navBarItems as item, index}
+			<div key={index}>
+				<a href={item.location} on:click={showMenu}>{item.label}</a>
+			</div>
+		{/each}
+	</div>
+</div>
+
 <style>
 	nav {
 		position: fixed;
@@ -31,7 +60,7 @@
 		list-style: none;
 		font-size: 2.4rem;
 		display: flex;
-		background: #b3cde0;
+		background: #e0b3cd;
 		justify-content: space-around;
 		margin: 0;
 		padding: 15px 0 20px;
@@ -41,7 +70,7 @@
 		text-transform: capitalize;
 	}
 	a {
-		color: #252835;
+		color: #352528;
 		transition: all 0.3s ease-in-out;
 	}
 	a:hover {
@@ -54,7 +83,7 @@
 		width: 45px;
 		height: 45px;
 		z-index: 5;
-		background: #252835;
+		background: #352528;
 		border-radius: 5px;
 	}
 
@@ -74,7 +103,7 @@
 		right: -100%;
 		transition: all 0.5s ease-in-out;
 		z-index: 10;
-		background: #b3cde0;
+		background: #e0b3cd;
 	}
 
 	.mobile-menu.show {
@@ -124,32 +153,3 @@
 		}
 	}
 </style>
-
-<div>
-	<a href="#" class="menu" on:click={showMenuWithoutAnchor}>
-		<img src="assets/menu.png" alt="Menu" />
-	</a>
-</div>
-<nav>
-	<ul>
-		{#each navBarItems as item, index}
-			<a href={item.location} key={index}>
-				<li>{item.label}</li>
-			</a>
-		{/each}
-	</ul>
-</nav>
-<div class={!menu ? 'mobile-menu' : 'mobile-menu show'}>
-	<div class="close-menu">
-		<a href="#" on:click={showMenuWithoutAnchor}>
-			<img src="assets/x.png" alt="Close Menu" />
-		</a>
-	</div>
-	<div class="flex-container">
-		{#each navBarItems as item, index}
-			<div key={index}>
-				<a href={item.location} on:click={showMenu}>{item.label}</a>
-			</div>
-		{/each}
-	</div>
-</div>
