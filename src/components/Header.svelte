@@ -80,6 +80,7 @@
 		width: 100%;
 		border-radius: 50%;
 		transform: rotateZ(-15deg);
+		visibility: hidden;
 	}
 	.header-image {
 		border-radius: 45%;
