@@ -2,7 +2,6 @@
 	import axios from "axios";
 
 	export let ip;
-	export let block;
 	export let isKr;
 	let name = "";
 	let email = "";
@@ -85,7 +84,7 @@
 					</a>
 				</div>
 				<div>
-					<a href="https://linkedin.com/in/laniercw" target="_blank">
+					<a href="https://linkedin.com/in/catielanier" target="_blank">
 						<img src="assets/linkedin.png" alt="LinkedIn" />
 					</a>
 				</div>
