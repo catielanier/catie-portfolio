@@ -30,5 +30,6 @@
         "dest": "index.html"
       }
     ]
-  }
+  },
+  "engines" : { "node" : ">=18.19" }
 }
