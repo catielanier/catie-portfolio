@@ -77,25 +77,28 @@
 	</p>
 	<div class="grid-container">
 		<div>
-			<p class="email">Email: iam@coreylanier.com</p>
+			<p class="email">Email: hello@catielanier.ca</p>
 			<div class="contact-gap">
 				<div>
 					<a href="https://github.com/lanierc" target="_blank">
 						<img src="assets/github.png" alt="Github" />
 					</a>
 				</div>
-				{#if !block}
-					<div>
-						<a href="https://linkedin.com/in/laniercw" target="_blank">
-							<img src="assets/linkedin.png" alt="LinkedIn" />
-						</a>
-					</div>
-					<div>
-						<a href="https://twitter.com/claniernsj" target="_blank">
-							<img src="assets/twitter.png" alt="Twitter" />
-						</a>
-					</div>
-				{/if}
+				<div>
+					<a href="https://linkedin.com/in/laniercw" target="_blank">
+						<img src="assets/linkedin.png" alt="LinkedIn" />
+					</a>
+				</div>
+				<div>
+					<a href="https://twitter.com/clDOTjs" target="_blank">
+						<img src="assets/twitter.png" alt="Twitter" />
+					</a>
+				</div>
+				<!-- <div>
+					<a href="https://instagram.com/aino.minako_" target="_blank">
+						<img src="assets/instagram.png" alt="Instagram" />
+					</a>
+				</div> -->
 			</div>
 		</div>
 		<div>
