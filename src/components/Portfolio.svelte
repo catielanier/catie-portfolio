@@ -58,33 +58,6 @@
 	];
 </script>
 
-<section>
-	<h2>Portfolio</h2>
-	{#each portfolioPieces as piece, index}
-		<div class="grid-container" key={index}>
-			<div>
-				<h3>{piece.title}</h3>
-				<p class="tools">{piece.tools}</p>
-				<p>{piece.description}</p>
-				<div class="link">
-					<a href={piece.previewLink} target="_blank">
-						<span>View the project online.</span>
-					</a>
-				</div>
-				<div class="link">
-					<a
-						href={`https://github.com/lanierc/${piece.githubRepo}`}
-						target="_blank"
-					>
-						<span>View the source code.</span>
-					</a>
-				</div>
-			</div>
-			<div><img src={`assets/${piece.imageName}.png`} alt={piece.title} /></div>
-		</div>
-	{/each}
-</section>
-
 <style>
 	h3 {
 		font-family: "Comfortaa", sans-serif;
@@ -102,7 +75,7 @@
 	p.tools {
 		margin-top: 0;
 		font-size: 1.5rem;
-		color: #e0b3cd;
+		color: #c28485;
 	}
 	.link {
 		font-family: "Arvo", serif;
@@ -111,15 +84,15 @@
 	}
 	.link a {
 		text-decoration: underline;
-		color: #a30557;
+		color: #f7a3b4;
 	}
 	span {
-		color: #fff;
+		color: #303030;
 		transition: all 0.3s ease-in-out;
 	}
 
 	.link a:hover span {
-		color: #a30557;
+		color: #f7a3b4;
 	}
 
 	.grid-container img {
@@ -149,3 +122,29 @@
 		}
 	}
 </style>
+
+<section>
+	<h2>Portfolio</h2>
+	{#each portfolioPieces as piece, index}
+		<div class="grid-container" key={index}>
+			<div>
+				<h3>{piece.title}</h3>
+				<p class="tools">{piece.tools}</p>
+				<p>{piece.description}</p>
+				<div class="link">
+					<a href={piece.previewLink} target="_blank">
+						<span>View the project online.</span>
+					</a>
+				</div>
+				<div class="link">
+					<a
+						href={`https://github.com/lanierc/${piece.githubRepo}`}
+						target="_blank">
+						<span>View the source code.</span>
+					</a>
+				</div>
+			</div>
+			<div><img src={`assets/${piece.imageName}.png`} alt={piece.title} /></div>
+		</div>
+	{/each}
+</section>

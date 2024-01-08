@@ -10,7 +10,7 @@
 			<li key={post._id}>
 				<span>
 					<a
-						href={`https://blog.catielanier.ca/post/${post._id}`}
+						href={`https://blog.coreylanier.com/post/${post._id}`}
 						target="_blank"
 					>
 						<span class="link">{post.title}</span>
@@ -19,7 +19,7 @@
 			</li>
 		{/each}
 	</ul>
-	<a href="https://blog.catielanier.ca" target="_blank" class="button">
+	<a href="https://blog.coreylanier.com" target="_blank" class="button">
 		<span />
 		<span />
 		<span />
@@ -34,7 +34,7 @@
 		list-style-position: outside;
 		font-family: "Neuton", serif;
 		font-size: 2.7rem;
-		color: #e0b3cd;
+		color: #c28485;
 		padding-bottom: 25px;
 	}
 	li > span {
@@ -43,121 +43,61 @@
 	}
 	li > span a {
 		text-decoration: underline;
-		color: #a30557;
+		color: #f7a3b4;
 	}
 	li span.link {
-		color: white;
+		color: #303030;
 		transition: all 0.3s ease-in-out;
 	}
 	li > span a:hover span.link {
-		color: #a30557;
+		color: #f7a3b4;
 	}
-
 	a.button {
+		cursor: pointer;
+		margin-top: 15px;
 		position: relative;
-		display: inline-block;
-		padding: 25px 30px;
-		margin: 40px 0;
-		color: #e0b3cd;
-		text-decoration: none;
-		text-transform: uppercase;
-		transition: 0.5s;
-		letter-spacing: 4px;
-		overflow: hidden;
-		margin-right: 50px;
+		padding: 15px 20px;
+		background: #fcccd3;
 		font-family: "Comfortaa", serif;
+		text-transform: uppercase;
 		font-size: 1.6rem;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
 		border: 0;
-		background: #352528;
-		font-weight: bold;
-		border-radius: 0;
+		transition: all 1s;
+		color: #c28485;
 	}
-
-	a.button:hover {
-		background: #e0b3cd;
-		color: #252835;
-		box-shadow: 0 0 5px #e0b3cd, 0 0 25px #e0b3cd, 0 0 50px #e0b3cd,
-			0 0 200px #e0b3cd;
-		-webkit-box-reflect: below 1px linear-gradient(transparent, #352528);
-	}
-
-	a.button span {
+	a.button:after,
+	a.button:before {
+		content: " ";
+		width: 10px;
+		height: 10px;
 		position: absolute;
-		display: block;
+		transition: all 1s;
+	}
+	a.button:after {
+		top: -1px;
+		left: -1px;
+		border-top: 2px solid #c28485;
+		border-left: 2px solid #c28485;
+	}
+	a.button:before {
+		bottom: -1px;
+		right: -1px;
+		border-bottom: 2px solid #c28485;
+		border-right: 2px solid #c28485;
+	}
+	a.button:hover {
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+		text-decoration: none;
+	}
+	a.button:hover:before,
+	a.button:hover:after {
+		width: 100%;
+		height: 100%;
 	}
 
-	a.button span:nth-child(1) {
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background: linear-gradient(90deg, transparent, #e0b3cd);
-		animation: animate1 1s linear infinite;
-	}
-	@keyframes animate1 {
-		0% {
-			left: -100%;
-		}
-		50%,
-		100% {
-			left: 100%;
-		}
-	}
-	a.button span:nth-child(2) {
-		top: -100%;
-		right: 0;
-		width: 2px;
-		height: 100%;
-		background: linear-gradient(180deg, transparent, #e0b3cd);
-		animation: animate2 1s linear infinite;
-		animation-delay: 0.25s;
-	}
-	@keyframes animate2 {
-		0% {
-			top: -100%;
-		}
-		50%,
-		100% {
-			top: 100%;
-		}
-	}
-	a.button span:nth-child(3) {
-		bottom: 0;
-		right: 0;
-		width: 100%;
-		height: 2px;
-		background: linear-gradient(270deg, transparent, #e0b3cd);
-		animation: animate3 1s linear infinite;
-		animation-delay: 0.5s;
-	}
-	@keyframes animate3 {
-		0% {
-			right: -100%;
-		}
-		50%,
-		100% {
-			right: 100%;
-		}
-	}
-
-	a.button span:nth-child(4) {
-		bottom: -100%;
-		left: 0;
-		width: 2px;
-		height: 100%;
-		background: linear-gradient(360deg, transparent, #e0b3cd);
-		animation: animate4 1s linear infinite;
-		animation-delay: 0.75s;
-	}
-	@keyframes animate4 {
-		0% {
-			bottom: -100%;
-		}
-		50%,
-		100% {
-			bottom: 100%;
-		}
-	}
 	@media (max-width: 424px) {
 		li {
 			padding-right: 5%;
