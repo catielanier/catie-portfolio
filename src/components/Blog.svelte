@@ -19,7 +19,7 @@
 			</li>
 		{/each}
 	</ul>
-	<a href="https://blog.coreylanier.com" target="_blank" class="button">
+	<a href="https://blog.catielanier.ca" target="_blank" class="button">
 		<span />
 		<span />
 		<span />
