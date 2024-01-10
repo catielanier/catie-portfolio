@@ -138,7 +138,7 @@
 				</div>
 				<div class="link">
 					<a
-						href={`https://github.com/lanierc/${piece.githubRepo}`}
+						href={`https://github.com/catielanier/${piece.githubRepo}`}
 						target="_blank">
 						<span>View the source code.</span>
 					</a>

@@ -79,7 +79,7 @@
 			<p class="email">Email: hello@catielanier.ca</p>
 			<div class="contact-gap">
 				<div>
-					<a href="https://github.com/lanierc" target="_blank">
+					<a href="https://github.com/catielanier" target="_blank">
 						<img src="assets/github.png" alt="Github" />
 					</a>
 				</div>
