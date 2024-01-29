@@ -17,7 +17,7 @@
 			lang: "ja",
 		},
 		{
-			text: "Bonjour à tous!",
+			text: "Bonjour à tous",
 			lang: "fr"
 		},
 		{
@@ -30,8 +30,8 @@
 <style>
 	h1 {
 		font-family: "Comfortaa", sans-serif;
-		font-size: 8.5rem;
-		height: 8.6rem;
+		font-size: 8rem;
+		height: 8.1rem;
 	}
 
 	header {
