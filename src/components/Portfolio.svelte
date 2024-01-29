@@ -14,7 +14,7 @@
 			tools: "React / TypeScript / Hooks / CSS / Python / Flask / MongoDB",
 			description:
 				"This app allows you to track your job applications more easily. With this app, you can create, update and delete job applications and their statuses, as well as track the job posting and your contact within the company. It also shows you statistics on your job hunt.",
-			previewLink: "https://job-hunt.coreylanier.com",
+			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "job-hunt",
 			imageName: "job-hunt",
 		},
@@ -24,7 +24,7 @@
 			tools: "Nuxt / Vuex / CSS / Node.js / Express / MongoDB",
 			description:
 				"A Vue full stack app that I built to create a simple content management system and frontend for a blog. It allows for new user creation, user admin to create multiple authors, posting and commenting.",
-			previewLink: "https://blog.coreylanier.com",
+			previewLink: "https://blog.catielanier.ca",
 			githubRepo: "vue-blog",
 			imageName: "blog",
 		},
@@ -51,7 +51,7 @@
 			tools: "HTML / Sass / jQuery",
 			description:
 				"A simple PSD wireframe conversion I made during bootcamp. This shows off great usage of Flexbox and CSS Grid which helps to maintain viewability on responsive design.",
-			previewLink: "https://maxshop.coreylanier.com",
+			previewLink: "https://maxshop.catielanier.ca",
 			githubRepo: "corey_lanier_project2",
 			imageName: "maxshop",
 		},
