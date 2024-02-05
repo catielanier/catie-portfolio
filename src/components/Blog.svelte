@@ -10,7 +10,7 @@
 			<li key={post._id}>
 				<span>
 					<a
-						href={`https://blog.coreylanier.com/post/${post._id}`}
+						href={`https://blog.catielanier.ca/post/${post._id}`}
 						target="_blank"
 					>
 						<span class="link">{post.title}</span>
