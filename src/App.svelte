@@ -13,20 +13,35 @@
 	let posts = [];
 	let ip;
 	let isKr;
-	onMount(async () => {
-		const blogPosts = [];
-		const res = await axios(
+	const retrieveBlogPosts = async () => {
+		const posts = [];
+		try {
+			const res = await axios(
 			"https://protected-atoll-04619.herokuapp.com/api/posts/",
-		);
-		res.data.data.forEach((item) => {
-			blogPosts.push(item);
-		});
-		posts = blogPosts;
-		const resIp = await axios.get(
+			);
+			res.data.data.forEach((item) => {
+				posts.push(item);
+			});
+			return posts;
+		} catch {
+			return posts;
+		}
+		
+	}
+	const retrieveLocationData = async () => {
+		const res = await axios.get(
 			"https://api.ipgeolocation.io/ipgeo?apiKey=54de6cf316574fa59a6580f75133b847",
 		);
-		ip = resIp.data.ip;
-		isKr = COUNTRIES.includes(resIp.data.country_code2);
+		return { ipAddress: res.data.ip, countryCode: res.data.country_code2 };
+	}
+	onMount(async () => {		
+		const blogPosts = await retrieveBlogPosts();
+		
+		const { ipAddress, countryCode } = await retrieveLocationData();
+
+		posts = blogPosts;
+		ip = ipAddress;
+		isKr = COUNTRIES.includes(countryCode);
 	});
 </script>
 
