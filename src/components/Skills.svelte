@@ -221,6 +221,10 @@
 			grid-gap: 0;
 		}
 
+		.grid-container div {
+			padding: 5px;
+		}
+
 		img {
 			height: 4rem;
 		}
