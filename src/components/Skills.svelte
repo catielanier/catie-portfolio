@@ -222,7 +222,8 @@
 		}
 
 		.grid-container div {
-			padding: 5px;
+			padding: 3px;
+			font-size: 0.8rem;
 		}
 
 		img {
