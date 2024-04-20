@@ -24,6 +24,10 @@
 			text: "Saluton al ĉiuj",
 			lang: "eo",
 		},
+		{
+			text: "Halo a h-uile duine!",
+			lang: "gd",
+		},
 	];
 </script>
 
