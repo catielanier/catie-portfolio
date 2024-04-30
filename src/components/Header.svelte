@@ -25,7 +25,7 @@
 			lang: "eo",
 		},
 		{
-			text: "Halo a h-uile duine!",
+			text: "Halo a h-uile duine",
 			lang: "gd",
 		},
 	];
@@ -34,8 +34,8 @@
 <style>
 	h1 {
 		font-family: "Comfortaa", sans-serif;
-		font-size: 8rem;
-		height: 8.1rem;
+		font-size: 7.6rem;
+		height: 7.7rem;
 	}
 
 	header {
@@ -56,8 +56,8 @@
 
 	@media (max-width: 1024px) {
 		h1 {
-			font-size: 6.6rem;
-			height: 6.7rem;
+			font-size: 6.2rem;
+			height: 6.3rem;
 		}
 	}
 
@@ -67,14 +67,14 @@
 			align-items: initial;
 		}
 		h1 {
-			font-size: 4.4rem;
-			height: 4.5rem;
+			font-size: 4.0rem;
+			height: 4.1rem;
 		}
 	}
 
 	@media (max-width: 424px) {
 		h1 {
-			font-size: 3.8rem;
+			font-size: 3.4rem;
 			height: 3.9rem;
 		}
 		header {
@@ -108,7 +108,7 @@
 
 	@media (max-width: 320px) {
 		h1 {
-			font-size: 3.2rem;
+			font-size: 2.8rem;
 			height: 3.3rem;
 		}
 		header {
