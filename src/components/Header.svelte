@@ -130,7 +130,7 @@
 			<span id="typed" />
 		</h1>
 		<p>
-			My name is Catie Lanier (pronouns she/they), and I am a non-binary multilingual (English, Mandarin,
+			My name is Catie Lanier (pronouns she/they), and I am a transfeminine multilingual (English, Mandarin,
 			Korean, Japanese, Esperanto) full stack developer based in Toronto. I am a
 			graduate of Juno College's Web Development Immersive, and am completely
 			fluent in Front End and Full Stack development.
