@@ -41,6 +41,31 @@
 			file: "redux",
 		},
 		{
+			name: "PHP",
+			type: "Backend",
+			file: "php",
+		},
+		{
+			name: "Laravel",
+			type: "Backend",
+			file: "laravel"
+		},
+		{
+			name: "Ruby",
+			type: "Backend",
+			file: "ruby"
+		},
+		{
+			name: "Rails",
+			type: "Backend",
+			file: "rails"
+		},
+		{
+			name: "Flutter",
+			type: "Frontend",
+			file: "flutter"
+		},
+		{
 			name: "Apollo",
 			type: "Frontend",
 			file: "apollo",
