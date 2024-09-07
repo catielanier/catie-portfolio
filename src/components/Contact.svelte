@@ -93,11 +93,16 @@
 						<img src="assets/twitter.png" alt="Twitter" />
 					</a>
 				</div>
-				<!-- <div>
-					<a href="https://instagram.com/aino.minako_" target="_blank">
+				<div>
+					<a href="https://instagram.com/ohohcatie" target="_blank">
 						<img src="assets/instagram.png" alt="Instagram" />
 					</a>
-				</div> -->
+				</div>
+				<div>
+					<a href="https://fiverr.com/catie_lanier" target="_blank">
+						<img src="assets/fiverr.png" alt="Fiverr" />
+					</a>
+				</div>
 			</div>
 		</div>
 		<div>
