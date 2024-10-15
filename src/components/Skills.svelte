@@ -66,9 +66,19 @@
 			file: "flutter"
 		},
 		{
+			name: "Swift",
+			type: "Frontend",
+			file: "Swift"
+		},
+		{
 			name: "Apollo",
 			type: "Frontend",
 			file: "apollo",
+		},
+		{
+			name: "Java",
+			type: "Backend",
+			file: "java",
 		},
 		{
 			name: "Kotlin",
@@ -104,6 +114,21 @@
 			name: "Flask",
 			type: "Backend",
 			file: "flask",
+		},
+		{
+			name: "C++",
+			type: "Backend",
+			file: "cpp",
+		},
+		{
+			name: "C#",
+			type: "Backend",
+			file: "csharp"
+		},
+		{
+			name: ".NET",
+			type: "Backend",
+			file: "dotnet"
 		},
 		{
 			name: "MongoDB",
