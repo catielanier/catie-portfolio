@@ -221,7 +221,10 @@
 		margin-top: 75px;
 		grid-template-columns: repeat(8, 1fr);
 		grid-gap: 20px;
-		font-size: 1.8rem;
+	}
+
+	.grid-container p {
+		font-size: 1.7rem;
 	}
 
 	.grid-container div {
