@@ -68,7 +68,7 @@
 		{
 			name: "Swift",
 			type: "Frontend",
-			file: "Swift"
+			file: "swift"
 		},
 		{
 			name: "Apollo",
