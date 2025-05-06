@@ -29,22 +29,22 @@
 			imageName: "blog",
 		},
 		{
-			title: "Date Changer",
-			tools: "Vue / API / Node.js / Express / MongoDB",
+			title: "Whiff City Scoreboard",
+			tools: "Svelte / TypeScript / Firebase / GraphQL / Websockets / CSS",
 			description:
-				"A web app I created for iCademy Middle East that utilizes the Canvas LMS API to allow teachers to automate the process of setting assignment dates. The app runs an algorithm to check the duration of the course, the number assignments, and automatically changes the due dates at a fixed interval.",
-			previewLink: "https://icad-dubai-dates.now.sh",
-			githubRepo: "date-changer",
-			imageName: "date-changer",
+				"A web app I built for SMRT eSports that hosts and updates an OS independent eSports scoreboard overlay that is importable into streaming solutions such as OBS and Xsplit. The app features live refreshing and debounced submission of score updates. Also integrated is retrieval of queued matches for live broadcast through Start.gg's GraphQL API, as well as score submission to Start.gg's bracket and update of scoreboard for next broadcasted matches. With this data, I also added a stream queue for players in the venue to know when their next match will be played.",
+			previewLink: "https://scoreboard.smrtesports.com/scoreboard",
+			githubRepo: "whiff-city-firebase",
+			imageName: "whiff-city-scoreboard",
 		},
 		{
-			title: "Name Changer",
-			tools: "React / API / Node.js / Express / Firebase",
+			title: "SMRT eSports",
+			tools: "Next.js / TypeScript / TailwindCSS / API / i18n",
 			description:
-				"A web app I created for iCademy Middle East that utilizes the Canvas LMS API to allow teachers to rename their course items in bulk by automating the renaming process. It features a Node.js proxy server to handle updating the data on the Canvas API, and a Firebase to track and undo changes.",
-			previewLink: "https://icad-name-changer.now.sh",
-			githubRepo: "name-changer",
-			imageName: "name-changer",
+				"A website I made using SSR in Next.js for an eSports organization. The site features i18n in Korean, Japanese, Mandarin, Spanish, and French, as well as a rotating gallery of event photos and a custom component for sanitizing anchor links from i18n dictionaries. Future plans include dynamic event pages and a blog.",
+			previewLink: "https://smrtesports.com",
+			githubRepo: "smrt-esports",
+			imageName: "smrt",
 		},
 		{
 			title: "Maxshop",
@@ -57,6 +57,42 @@
 		},
 	];
 </script>
+
+<section>
+	<h2>Portfolio</h2>
+	{#each portfolioPieces as piece, index}
+		<div class="grid-container" key={index}>
+			<div>
+				<h3>{piece.title}</h3>
+				<p class="tools">{piece.tools}</p>
+				<p>{piece.description}</p>
+				<div class="link">
+					<a href={piece.previewLink} target="_blank">
+						<span>View the project online.</span>
+					</a>
+				</div>
+				<div class="link">
+					<a
+						href={`https://github.com/catielanier/${piece.githubRepo}`}
+						target="_blank"
+					>
+						<span>View the source code.</span>
+					</a>
+				</div>
+			</div>
+			<div><img src={`assets/${piece.imageName}.png`} alt={piece.title} /></div>
+		</div>
+	{/each}
+	<div>
+		<a href="https://github.com/catielanier" target="_blank" class="button">
+			<span />
+			<span />
+			<span />
+			<span />
+			See What I'm Currently Working On
+		</a>
+	</div>
+</section>
 
 <style>
 	h3 {
@@ -168,38 +204,3 @@
 		}
 	}
 </style>
-
-<section>
-	<h2>Portfolio</h2>
-	{#each portfolioPieces as piece, index}
-		<div class="grid-container" key={index}>
-			<div>
-				<h3>{piece.title}</h3>
-				<p class="tools">{piece.tools}</p>
-				<p>{piece.description}</p>
-				<div class="link">
-					<a href={piece.previewLink} target="_blank">
-						<span>View the project online.</span>
-					</a>
-				</div>
-				<div class="link">
-					<a
-						href={`https://github.com/catielanier/${piece.githubRepo}`}
-						target="_blank">
-						<span>View the source code.</span>
-					</a>
-				</div>
-			</div>
-			<div><img src={`assets/${piece.imageName}.png`} alt={piece.title} /></div>
-		</div>
-	{/each}
-	<div>
-		<a href="https://github.com/catielanier" target="_blank" class="button">
-			<span />
-			<span />
-			<span />
-			<span />
-			See What I'm Currently Working On
-		</a>
-	</div>
-</section>
