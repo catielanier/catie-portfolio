@@ -33,7 +33,8 @@
 			tools: "Svelte / TypeScript / Firebase / GraphQL / Websockets / CSS",
 			description:
 				"Developed a cross-platform web app for SMRT eSports that delivers a live-updating, stream-ready scoreboard overlay compatible with OBS and XSplit. Integrated Start.gg’s GraphQL API for match queue retrieval and score submission, with a debounced UI for real-time updates. Also built a stream queue to notify players onsite of upcoming streamed matches.",
-			previewLink: "https://scoreboard.smrtesports.com/scoreboard",
+			previewLink:
+				"https://scoreboard.smrtesports.com/scoreboard/-ONME5VZUomKnVpSicbz",
 			githubRepo: "whiff-city-firebase",
 			imageName: "whiff-city-scoreboard",
 		},

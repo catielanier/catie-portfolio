@@ -1,6 +1,12 @@
+<script>
+	const currentYear = Date().getFullYear();
+</script>
+
 <div class="footer-container">
 	<footer>
-		<div class="copyright">© 2020-2024 Catie Lanier, all rights reserved.</div>
+		<div class="copyright">
+			© 2020-{currentYear} Catie Lanier, all rights reserved.
+		</div>
 		<div class="framework">
 			Created using
 			<a href="https://svelte.dev" target="_blank">
