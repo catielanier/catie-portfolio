@@ -1,5 +1,5 @@
 <script>
-	const currentYear = Date().getFullYear();
+	const currentYear = new Date().getFullYear();
 </script>
 
 <div class="footer-container">
