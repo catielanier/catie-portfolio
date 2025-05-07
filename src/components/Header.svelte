@@ -18,7 +18,7 @@
 		},
 		{
 			text: "Bonjour à tous",
-			lang: "fr"
+			lang: "fr",
 		},
 		{
 			text: "Saluton al ĉiuj",
@@ -30,91 +30,6 @@
 		},
 	];
 </script>
-
-<style>
-	h1 {
-		font-family: "Comfortaa", sans-serif;
-		font-size: 7.6rem;
-		height: 7.7rem;
-	}
-
-	header {
-		padding-top: 120px;
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		grid-gap: 30px;
-		align-items: center;
-	}
-	img {
-		width: 100%;
-		border-radius: 50%;
-	}
-	.header-image {
-		border-radius: 45%;
-	}
-
-	@media (max-width: 1024px) {
-		h1 {
-			font-size: 6.2rem;
-			height: 6.3rem;
-		}
-	}
-
-	@media (max-width: 768px) {
-		header {
-			grid-template-columns: 1.5fr 1fr;
-			align-items: initial;
-		}
-		h1 {
-			font-size: 4.0rem;
-			height: 4.1rem;
-		}
-	}
-
-	@media (max-width: 424px) {
-		h1 {
-			font-size: 3.4rem;
-			height: 3.9rem;
-		}
-		header {
-			padding-top: 50px;
-			grid-template-rows: 1fr 2fr;
-			grid-template-columns: 100%;
-			grid-auto-flow: dense;
-			margin: 0 auto;
-			grid-gap: 0;
-		}
-
-		header div:first-of-type {
-			grid-row: 2;
-		}
-
-		header div:last-child {
-			text-align: center;
-		}
-
-		img {
-			transform: none;
-		}
-	}
-
-	@media (max-width: 375px) {
-		h1 {
-			font-size: 3.5rem;
-			height: 3.6rem;
-		}
-	}
-
-	@media (max-width: 320px) {
-		h1 {
-			font-size: 2.8rem;
-			height: 3.3rem;
-		}
-		header {
-			grid-template-rows: 0.5fr 2fr;
-		}
-	}
-</style>
 
 <header id="home">
 	<div>
@@ -148,7 +63,7 @@
 			care to everything I do.
 		</p>
 		<p>
-			Outside of coding, I enjoy playing video games, playing bass guitar, 
+			Outside of coding, I enjoy playing video games, playing bass guitar,
 			shopping and fashion, and spending time with my cats.
 		</p>
 	</div>
@@ -158,3 +73,88 @@
 		</div>
 	</div>
 </header>
+
+<style>
+	h1 {
+		font-family: "Comfortaa", sans-serif;
+		font-size: 7.1rem;
+		height: 7.2rem;
+	}
+
+	header {
+		padding-top: 120px;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-gap: 30px;
+		align-items: center;
+	}
+	img {
+		width: 100%;
+		border-radius: 50%;
+	}
+	.header-image {
+		border-radius: 45%;
+	}
+
+	@media (max-width: 1024px) {
+		h1 {
+			font-size: 5.7rem;
+			height: 5.8rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		header {
+			grid-template-columns: 1.5fr 1fr;
+			align-items: initial;
+		}
+		h1 {
+			font-size: 3.5rem;
+			height: 3.6rem;
+		}
+	}
+
+	@media (max-width: 424px) {
+		h1 {
+			font-size: 2.9rem;
+			height: 3rem;
+		}
+		header {
+			padding-top: 50px;
+			grid-template-rows: 1fr 2fr;
+			grid-template-columns: 100%;
+			grid-auto-flow: dense;
+			margin: 0 auto;
+			grid-gap: 0;
+		}
+
+		header div:first-of-type {
+			grid-row: 2;
+		}
+
+		header div:last-child {
+			text-align: center;
+		}
+
+		img {
+			transform: none;
+		}
+	}
+
+	@media (max-width: 375px) {
+		h1 {
+			font-size: 2.8rem;
+			height: 2.9rem;
+		}
+	}
+
+	@media (max-width: 320px) {
+		h1 {
+			font-size: 2.3rem;
+			height: 2.4rem;
+		}
+		header {
+			grid-template-rows: 0.5fr 2fr;
+		}
+	}
+</style>
