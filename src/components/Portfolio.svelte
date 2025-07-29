@@ -10,6 +10,15 @@
 			imageName: "notez",
 		},
 		{
+			title: "Elixir Day Spa",
+			tools: "Svelte / CSS",
+			description:
+				"A website for a local day spa that I made to modernize the client's business website, built to her specifications. Svelte was used for fast builds and low bundle size. I included a carousel gallery to showcase her studio, and helped maintain her solid SEO rankings.",
+			previewLink: "https://elixirdayspa.ca",
+			githubRepo: "elixir-day-spa",
+			imageName: "elixir",
+		},
+		{
 			title: "Job Hunt",
 			tools: "React / TypeScript / Hooks / CSS / Python / Flask / MongoDB",
 			description:
@@ -17,16 +26,6 @@
 			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "job-hunt",
 			imageName: "job-hunt",
-		},
-
-		{
-			title: "Vue Blog",
-			tools: "Nuxt / Vuex / CSS / Node.js / Express / MongoDB",
-			description:
-				"A Vue full stack app that I built to create a simple content management system and frontend for a blog. It allows for new user creation, user admin to create multiple authors, posting and commenting.",
-			previewLink: "https://blog.catielanier.ca",
-			githubRepo: "vue-blog",
-			imageName: "blog",
 		},
 		{
 			title: "Whiff City Scoreboard",
@@ -48,13 +47,13 @@
 			imageName: "smrt",
 		},
 		{
-			title: "Maxshop",
-			tools: "HTML / Sass / jQuery",
+			title: "Vue Blog",
+			tools: "Nuxt / Vuex / CSS / Node.js / Express / MongoDB",
 			description:
-				"A simple PSD wireframe conversion I made during bootcamp. This shows off great usage of Flexbox and CSS Grid which helps to maintain viewability on responsive design.",
-			previewLink: "https://maxshop.catielanier.ca",
-			githubRepo: "corey_lanier_project2",
-			imageName: "maxshop",
+				"A Vue full stack app that I built to create a simple content management system and frontend for a blog. It allows for new user creation, user admin to create multiple authors, posting and commenting.",
+			previewLink: "https://blog.catielanier.ca",
+			githubRepo: "vue-blog",
+			imageName: "blog",
 		},
 	];
 </script>
