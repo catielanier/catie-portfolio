@@ -102,7 +102,7 @@
 
 	.skill p {
 		margin-top: 0.75rem;
-		font-size: 1rem;
+		font-size: 1.4rem;
 		color: #fcccd3;
 		transition: color 0.3s;
 	}
