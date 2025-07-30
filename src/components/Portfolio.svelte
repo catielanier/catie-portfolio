@@ -11,7 +11,7 @@
 		},
 		{
 			title: "Elixir Day Spa",
-			tools: "Svelte / CSS",
+			tools: "Svelte / Firebase / CSS",
 			description:
 				"A website for a local day spa that I made to modernize the client's business website, built to her specifications. Svelte was used for fast builds and low bundle size. I included a carousel gallery to showcase her studio, and helped maintain her solid SEO rankings.",
 			previewLink: "https://elixirdayspa.ca",
