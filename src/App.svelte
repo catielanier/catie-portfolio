@@ -5,7 +5,7 @@
 	import Portfolio from "./components/Portfolio.svelte";
 	import Contact from "./components/Contact.svelte";
 	import Footer from "./components/Footer.svelte";
-	import Blog from "./components/Blog.svelte";
+	// import Blog from "./components/Blog.svelte";
 	import { onMount } from "svelte";
 	import axios from "axios";
 	import { COUNTRIES } from "./utils/constants";
@@ -17,7 +17,7 @@
 		const posts = [];
 		try {
 			const res = await axios(
-			"https://protected-atoll-04619.herokuapp.com/api/posts/",
+				"https://protected-atoll-04619.herokuapp.com/api/posts/",
 			);
 			res.data.data.forEach((item) => {
 				posts.push(item);
@@ -26,17 +26,16 @@
 		} catch {
 			return posts;
 		}
-		
-	}
+	};
 	const retrieveLocationData = async () => {
 		const res = await axios.get(
 			"https://api.ipgeolocation.io/ipgeo?apiKey=54de6cf316574fa59a6580f75133b847",
 		);
 		return { ipAddress: res.data.ip, countryCode: res.data.country_code2 };
-	}
-	onMount(async () => {		
+	};
+	onMount(async () => {
 		const blogPosts = await retrieveBlogPosts();
-		
+
 		const { ipAddress, countryCode } = await retrieveLocationData();
 
 		posts = blogPosts;
@@ -53,8 +52,8 @@
 		<Skills />
 		<Divider anchorId="portfolio" />
 		<Portfolio />
-		<Divider anchorId="blog" />
-		<Blog {posts} />
+		<!-- <Divider anchorId="blog" /> -->
+		<!-- <Blog {posts} /> -->
 		<Divider anchorId="contact" />
 		<Contact {ip} {isKr} />
 	</main>

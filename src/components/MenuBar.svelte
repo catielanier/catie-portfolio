@@ -3,7 +3,7 @@
 		{ label: "home", location: "#home" },
 		{ label: "skills", location: "#skills" },
 		{ label: "portfolio", location: "#portfolio" },
-		{ label: "blog", location: "#blog" },
+		// { label: "blog", location: "#blog" },
 		{ label: "contact", location: "#contact" },
 	];
 	let menu = false;
@@ -16,6 +16,35 @@
 		menu = !menu;
 	};
 </script>
+
+<div>
+	<a href="#" class="menu" on:click={showMenuWithoutAnchor}>
+		<img src="assets/menu.png" alt="Menu" />
+	</a>
+</div>
+<nav>
+	<ul>
+		{#each navBarItems as item, index}
+			<a href={item.location} key={index}>
+				<li>{item.label}</li>
+			</a>
+		{/each}
+	</ul>
+</nav>
+<div class={!menu ? "mobile-menu" : "mobile-menu show"}>
+	<div class="close-menu">
+		<a href="#" on:click={showMenuWithoutAnchor}>
+			<img src="assets/x.png" alt="Close Menu" />
+		</a>
+	</div>
+	<div class="flex-container">
+		{#each navBarItems as item, index}
+			<div key={index}>
+				<a href={item.location} on:click={showMenu}>{item.label}</a>
+			</div>
+		{/each}
+	</div>
+</div>
 
 <style>
 	nav {
@@ -128,32 +157,3 @@
 		}
 	}
 </style>
-
-<div>
-	<a href="#" class="menu" on:click={showMenuWithoutAnchor}>
-		<img src="assets/menu.png" alt="Menu" />
-	</a>
-</div>
-<nav>
-	<ul>
-		{#each navBarItems as item, index}
-			<a href={item.location} key={index}>
-				<li>{item.label}</li>
-			</a>
-		{/each}
-	</ul>
-</nav>
-<div class={!menu ? 'mobile-menu' : 'mobile-menu show'}>
-	<div class="close-menu">
-		<a href="#" on:click={showMenuWithoutAnchor}>
-			<img src="assets/x.png" alt="Close Menu" />
-		</a>
-	</div>
-	<div class="flex-container">
-		{#each navBarItems as item, index}
-			<div key={index}>
-				<a href={item.location} on:click={showMenu}>{item.label}</a>
-			</div>
-		{/each}
-	</div>
-</div>
