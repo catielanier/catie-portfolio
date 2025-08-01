@@ -35,6 +35,7 @@
 		{ name: "Neovim", type: "Tooling", file: "neovim" },
 		{ name: "GraphQL", type: "Tooling", file: "graphql" },
 		{ name: "WebSockets", type: "Tooling", file: "websockets" },
+		{ name: "Docker", type: "Tooling", file: "docker" },
 		{ name: "Shell Scripting", type: "Tooling", file: "shell" },
 	];
 
