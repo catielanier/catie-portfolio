@@ -1,9 +1,9 @@
 <script>
 	import axios from "axios";
-	import instagram from '../assets/instagram.png';
-	import linkedin from '../assets/linkedin.png';
-	import github from '../assets/github.png';
-	import fiverr from '../assets/fiverr.png';
+	import instagram from "../assets/instagram.png";
+	import linkedin from "../assets/linkedin.png";
+	import github from "../assets/github.png";
+	import fiverr from "../assets/fiverr.png";
 
 	export let ip;
 	export let isKr;
@@ -75,73 +75,107 @@
 <section>
 	<h2>Contact</h2>
 	<p>
-		Let's create internet masterpieces together! If you want to hire or
-		commission me for work, please contact me in one of the ways below.
+		Let’s build something together. I’m currently available for freelance
+		contracts — remote, hybrid, or in-person across the Greater Toronto Area and
+		Simcoe County. Whether you need a web app, esports tool, or custom API,
+		reach out below.
 	</p>
 	<div class="grid-container">
 		<div>
 			<p class="email">Email: hello@catielanier.ca</p>
+			{#if !isKr}
+				<p>
+					Prefer to talk directly?
+					<a
+						href="https://calendly.com/catielanier/30min"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="calendly"
+					>
+						Schedule a free call with me
+					</a>.
+				</p>
+			{/if}
+
 			<div class="contact-gap">
 				<div>
-					<a href="https://github.com/catielanier" target="_blank">
+					<a
+						href="https://github.com/catielanier"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src={github} alt="Github" />
 					</a>
 				</div>
 				<div>
-					<a href="https://linkedin.com/in/catielanier" target="_blank">
+					<a
+						href="https://linkedin.com/in/catielanier"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src={linkedin} alt="LinkedIn" />
 					</a>
 				</div>
 				<div>
-					<a href="https://instagram.com/ohohcatie" target="_blank">
+					<a
+						href="https://instagram.com/ohohcatie"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src={instagram} alt="Instagram" />
 					</a>
 				</div>
 				<div>
-					<a href="https://fiverr.com/catie_lanier" target="_blank">
+					<a
+						href="https://fiverr.com/catie_lanier"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src={fiverr} alt="Fiverr" />
 					</a>
 				</div>
 			</div>
 		</div>
 		<div>
-			<form on:submit|preventDefault={validateMessage}>
-				<input
-					type="text"
-					name="name"
-					bind:value={name}
-					required
-					placeholder="Your name"
-				/>
-				<input
-					type="email"
-					name="email"
-					bind:value={email}
-					required
-					placeholder="Email address"
-				/>
-				<textarea
-					placeholder="Your message"
-					name="message"
-					bind:value={message}
-					required
-					cols="30"
-					rows="10"
-				/>
-				<input type="hidden" name="ip" bind:value={ip} />
-				<input
-					type="hidden"
-					name="voice of god activated"
-					bind:value={voiceOfGod}
-				/>
-				<button type="submit">
-					<span />
-					<span />
-					<span />
-					<span />
-					Send email
-				</button>
-			</form>
+			{#if !isKr}
+				<form on:submit|preventDefault={validateMessage}>
+					<input
+						type="text"
+						name="name"
+						bind:value={name}
+						required
+						placeholder="Your name"
+					/>
+					<input
+						type="email"
+						name="email"
+						bind:value={email}
+						required
+						placeholder="Email address"
+					/>
+					<textarea
+						placeholder="Tell me about your project (scope, timeline, goals)"
+						name="message"
+						bind:value={message}
+						required
+						cols="30"
+						rows="10"
+					/>
+					<input type="hidden" name="ip" bind:value={ip} />
+					<input
+						type="hidden"
+						name="voice of god activated"
+						bind:value={voiceOfGod}
+					/>
+					<button type="submit">
+						<span />
+						<span />
+						<span />
+						<span />
+						Send email
+					</button>
+				</form>
+			{/if}
 		</div>
 	</div>
 </section>
@@ -266,6 +300,16 @@
 
 	textarea {
 		resize: none;
+	}
+
+	a.calendly {
+		text-decoration: underline;
+		color: #c28485; /* your rose accent — darker, readable */
+		transition: color 0.2s ease-in-out;
+	}
+
+	a.calendly:hover {
+		color: #f7a3b4; /* lighter pink on hover */
 	}
 
 	@media (max-width: 424px) {
