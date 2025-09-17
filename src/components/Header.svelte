@@ -1,4 +1,5 @@
 <script>
+	import catie from '../assets/catie.jpg';
 	const languageGreetings = [
 		{
 			text: "Hello all",
@@ -69,7 +70,7 @@
 	</div>
 	<div>
 		<div class="header-image">
-			<img src="../assets/catie.jpg" alt="Catie Lanier" />
+			<img src={catie} alt="Catie Lanier" />
 		</div>
 	</div>
 </header>

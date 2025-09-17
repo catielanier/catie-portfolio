@@ -1,10 +1,12 @@
-import App from "./App.svelte";
+import { mount } from 'svelte'
+import './app.css'
+import App from './App.svelte'
 import Typed from "typed.js";
 import SmoothScroll from "smooth-scroll";
 
-const app = new App({
-  target: document.body,
-});
+const app = mount(App, {
+  target: document.getElementById('app'),
+})
 
 const typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
@@ -24,4 +26,4 @@ const voiceOfGodTyped = new Typed("#typedVog", {
 
 const scroll = new SmoothScroll('a[href*="#"]');
 
-export default app;
+export default app

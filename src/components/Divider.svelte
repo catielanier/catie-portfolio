@@ -1,10 +1,11 @@
 <script>
     export let anchorId;
+	import monogram from '../assets/monogram.png';
 </script>
 
 <div class="divider" id={anchorId}>
     <div class="div-transparent" />
-    <img src="../assets/monogram.png" alt="monogram">
+    <img src={monogram} alt="monogram">
 </div>
 
 <style>

@@ -1,5 +1,9 @@
 <script>
 	import axios from "axios";
+	import instagram from '../assets/instagram.png';
+	import linkedin from '../assets/linkedin.png';
+	import github from '../assets/github.png';
+	import fiverr from '../assets/fiverr.png';
 
 	export let ip;
 	export let isKr;
@@ -80,27 +84,22 @@
 			<div class="contact-gap">
 				<div>
 					<a href="https://github.com/catielanier" target="_blank">
-						<img src="assets/github.png" alt="Github" />
+						<img src={github} alt="Github" />
 					</a>
 				</div>
 				<div>
 					<a href="https://linkedin.com/in/catielanier" target="_blank">
-						<img src="assets/linkedin.png" alt="LinkedIn" />
-					</a>
-				</div>
-				<div>
-					<a href="https://twitter.com/clDOTjs" target="_blank">
-						<img src="assets/twitter.png" alt="Twitter" />
+						<img src={linkedin} alt="LinkedIn" />
 					</a>
 				</div>
 				<div>
 					<a href="https://instagram.com/ohohcatie" target="_blank">
-						<img src="assets/instagram.png" alt="Instagram" />
+						<img src={instagram} alt="Instagram" />
 					</a>
 				</div>
 				<div>
 					<a href="https://fiverr.com/catie_lanier" target="_blank">
-						<img src="assets/fiverr.png" alt="Fiverr" />
+						<img src={fiverr} alt="Fiverr" />
 					</a>
 				</div>
 			</div>

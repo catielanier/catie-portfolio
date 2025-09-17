@@ -1,4 +1,6 @@
 <script>
+	import menuImage from '../assets/menu.png';
+	import x from '../assets/x.png';
 	const navBarItems = [
 		{ label: "home", location: "#home" },
 		{ label: "skills", location: "#skills" },
@@ -19,13 +21,13 @@
 
 <div>
 	<a href="#" class="menu" on:click={showMenuWithoutAnchor}>
-		<img src="assets/menu.png" alt="Menu" />
+		<img src={menuImage} alt="Menu" />
 	</a>
 </div>
 <nav>
 	<ul>
-		{#each navBarItems as item, index}
-			<a href={item.location} key={index}>
+		{#each navBarItems as item}
+			<a href={item.location}>
 				<li>{item.label}</li>
 			</a>
 		{/each}
@@ -34,12 +36,12 @@
 <div class={!menu ? "mobile-menu" : "mobile-menu show"}>
 	<div class="close-menu">
 		<a href="#" on:click={showMenuWithoutAnchor}>
-			<img src="assets/x.png" alt="Close Menu" />
+			<img src={x} alt="Close Menu" />
 		</a>
 	</div>
 	<div class="flex-container">
-		{#each navBarItems as item, index}
-			<div key={index}>
+		{#each navBarItems as item}
+			<div>
 				<a href={item.location} on:click={showMenu}>{item.label}</a>
 			</div>
 		{/each}

@@ -1,14 +1,10 @@
 <script>
+	import notez from "../assets/notez.png";
+	import elixir from "../assets/elixir.png";
+	import jobHunt from "../assets/job-hunt.png";
+	import whiffCityScoreboard from "../assets/whiff-city-scoreboard.png";
+	import smrt from "../assets/smrt.png";
 	const portfolioPieces = [
-		{
-			title: "NoteZ",
-			tools: "React / Material UI / Hooks / i18n / Node.js / Express / MongoDB",
-			description:
-				"This note app is designed for the storage and retrieval of notes meant for specific scenarios, such as matchups within competitive gaming. You are also able to further filter the notes based on specified data, so as to make them easier to read.",
-			previewLink: "https://checkthenotez.com",
-			githubRepo: "notez",
-			imageName: "notez",
-		},
 		{
 			title: "Elixir Day Spa",
 			tools: "Svelte / Firebase / CSS",
@@ -16,16 +12,7 @@
 				"A website for a local day spa that I made to modernize the client's business website, built to her specifications. Svelte was used for fast builds and low bundle size. I included a carousel gallery to showcase her studio, and helped maintain her solid SEO rankings.",
 			previewLink: "https://elixirdayspa.ca",
 			githubRepo: "elixir-day-spa",
-			imageName: "elixir",
-		},
-		{
-			title: "Job Hunt",
-			tools: "React / TypeScript / Hooks / CSS / Python / Flask / MongoDB",
-			description:
-				"This app allows you to track your job applications more easily. With this app, you can create, update and delete job applications and their statuses, as well as track the job posting and your contact within the company. It also shows you statistics on your job hunt.",
-			previewLink: "https://job-hunt.catielanier.ca",
-			githubRepo: "job-hunt",
-			imageName: "job-hunt",
+			file: elixir,
 		},
 		{
 			title: "Whiff City Scoreboard",
@@ -35,7 +22,7 @@
 			previewLink:
 				"https://scoreboard.smrtesports.com/scoreboard/-ONME5VZUomKnVpSicbz",
 			githubRepo: "whiff-city-firebase",
-			imageName: "whiff-city-scoreboard",
+			file: whiffCityScoreboard,
 		},
 		{
 			title: "SMRT eSports",
@@ -44,17 +31,26 @@
 				"A website I made using SSR in Next.js for an eSports organization. The site features i18n in Korean, Japanese, Mandarin, Spanish, and French, as well as a rotating gallery of event photos and a custom component for sanitizing anchor links from i18n dictionaries. Future plans include dynamic event pages and a blog.",
 			previewLink: "https://smrtesports.com",
 			githubRepo: "smrt-esports",
-			imageName: "smrt",
+			file: smrt,
 		},
-		// {
-		// 	title: "Vue Blog",
-		// 	tools: "Nuxt / Vuex / CSS / Node.js / Express / MongoDB",
-		// 	description:
-		// 		"A Vue full stack app that I built to create a simple content management system and frontend for a blog. It allows for new user creation, user admin to create multiple authors, posting and commenting.",
-		// 	previewLink: "https://blog.catielanier.ca",
-		// 	githubRepo: "vue-blog",
-		// 	imageName: "blog",
-		// },
+		{
+			title: "NoteZ",
+			tools: "React / Material UI / Hooks / i18n / Node.js / Express / MongoDB",
+			description:
+				"This note app is designed for the storage and retrieval of notes meant for specific scenarios, such as matchups within competitive gaming. You are also able to further filter the notes based on specified data, so as to make them easier to read.",
+			previewLink: "https://checkthenotez.com",
+			githubRepo: "notez",
+			file: notez,
+		},
+		{
+			title: "Job Hunt",
+			tools: "React / TypeScript / Hooks / CSS / Python / Flask / MongoDB",
+			description:
+				"This app allows you to track your job applications more easily. With this app, you can create, update and delete job applications and their statuses, as well as track the job posting and your contact within the company. It also shows you statistics on your job hunt.",
+			previewLink: "https://job-hunt.catielanier.ca",
+			githubRepo: "job-hunt",
+			file: jobHunt,
+		}
 	];
 </script>
 
@@ -80,7 +76,7 @@
 					</a>
 				</div>
 			</div>
-			<div><img src={`assets/${piece.imageName}.png`} alt={piece.title} /></div>
+			<div><img src={piece.file} alt={piece.title} /></div>
 		</div>
 	{/each}
 	<div>
