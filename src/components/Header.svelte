@@ -23,11 +23,11 @@
 		</h1>
 
 		<!-- ✅ replace your long bio with this single value line -->
-		<p class="tagline">
+		<h2 class="tagline">
 			Freelance Software Engineer helping startups, esports orgs, and small
 			businesses build fast, clean apps — serving the Greater Toronto Area and
 			Simcoe County.
-		</p>
+		</h2>
 
 		<p>
 			My name is Catie Lanier, and I am a multilingual (English, Mandarin,
@@ -88,13 +88,9 @@
 		align-items: center;
 	}
 
-	/* subtle, on-brand supporting line */
-	.tagline {
-		font-family: "Comfortaa", sans-serif;
-		font-weight: bold;
-		margin: 2rem 0 0.6rem;
-		max-width: 62ch;
-		opacity: 0.9;
+	h2.tagline {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
 	}
 
 	.hero-links {
