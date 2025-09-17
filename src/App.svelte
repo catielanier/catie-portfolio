@@ -1,4 +1,5 @@
 <script>
+	import {inject} from '@vercel/analytics';
 	import MenuBar from "./components/MenuBar.svelte";
 	import Header from "./components/Header.svelte";
 	import Skills from "./components/Skills.svelte";
@@ -34,6 +35,7 @@
 		return { ipAddress: res.data.ip, countryCode: res.data.country_code2 };
 	};
 	onMount(async () => {
+		inject();
 		const blogPosts = await retrieveBlogPosts();
 
 		const { ipAddress, countryCode } = await retrieveLocationData();
