@@ -37,7 +37,7 @@
 		<h1>
 			<div id="typed-strings">
 				{#each languageGreetings as greeting}
-					<p class={`greeting-${greeting.lang}`} key={greeting.lang}>
+					<p class={`greeting-${greeting.lang}`}>
 						{greeting.text}!
 					</p>
 				{/each}
