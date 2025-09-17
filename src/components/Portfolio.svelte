@@ -85,7 +85,7 @@
 			<span />
 			<span />
 			<span />
-			See What I'm Currently Working On
+			See What I'm Working On
 		</a>
 	</div>
 </section>
