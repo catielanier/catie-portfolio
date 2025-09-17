@@ -25,7 +25,7 @@
 		<!-- ✅ replace your long bio with this single value line -->
 		<h2 class="tagline">
 			Freelance Software Engineer helping startups, esports orgs, and small
-			businesses build fast, clean apps — serving the Greater Toronto Area and
+			businesses build fast, clean apps and websites — serving the Greater Toronto Area and
 			Simcoe County.
 		</h2>
 
