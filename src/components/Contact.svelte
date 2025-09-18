@@ -75,7 +75,7 @@
 <section>
 	<h2>Contact</h2>
 	<p>
-		Let’s build something together. I’m currently available for freelance
+		Let's build something together. I'm currently available for freelance
 		contracts — remote, hybrid, or in-person across the Greater Toronto Area and
 		Simcoe County. Whether you need a web app, esports tool, or custom API,
 		reach out below.
