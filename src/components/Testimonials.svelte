@@ -24,7 +24,7 @@
 
 <section>
 	<h2>Testimonials</h2>
-	<p>What my clients say about me:</p>
+	<p>What people say about me:</p>
 	<div class="carousel-wrapper">
 		<Carousel
 			bind:this={carousel}
@@ -45,3 +45,13 @@
 		</Carousel>
 	</div>
 </section>
+
+<style>
+	.carousel-wrapper footer {
+		text-align: right;
+		font-style: italic;
+		margin-top: 1rem;
+		font-family: "Neuton", serif;
+		font-size: 1.7rem;
+	}
+</style>

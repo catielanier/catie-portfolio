@@ -1,11 +1,11 @@
 <script>
-	import menuImage from '../assets/menu.png';
-	import x from '../assets/x.png';
+	import menuImage from "../assets/menu.png";
+	import x from "../assets/x.png";
 	const navBarItems = [
 		{ label: "home", location: "#home" },
 		{ label: "skills", location: "#skills" },
 		{ label: "portfolio", location: "#portfolio" },
-		// { label: "blog", location: "#blog" },
+		{ label: "testimonials", location: "#testimonials" },
 		{ label: "contact", location: "#contact" },
 	];
 	let menu = false;

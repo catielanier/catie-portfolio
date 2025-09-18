@@ -1,5 +1,5 @@
 <script>
-	import {inject} from '@vercel/analytics';
+	import { inject } from "@vercel/analytics";
 	import MenuBar from "./components/MenuBar.svelte";
 	import Header from "./components/Header.svelte";
 	import Skills from "./components/Skills.svelte";
@@ -11,6 +11,7 @@
 	import axios from "axios";
 	import { COUNTRIES } from "./utils/constants";
 	import Divider from "./components/Divider.svelte";
+	import Testimonials from "./components/Testimonials.svelte";
 	let posts = [];
 	let ip;
 	let isKr;
@@ -54,6 +55,8 @@
 		<Skills />
 		<Divider anchorId="portfolio" />
 		<Portfolio />
+		<Divider anchorId="testimonials" />
+		<Testimonials />
 		<!-- <Divider anchorId="blog" /> -->
 		<!-- <Blog {posts} /> -->
 		<Divider anchorId="contact" />
