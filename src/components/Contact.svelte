@@ -84,8 +84,8 @@
 		<div>
 			<p class="email">Email: hello@catielanier.ca</p>
 			{#if !isKr}
+				<p>Prefer to talk directly?</p>
 				<p>
-					Prefer to talk directly?
 					<a
 						href="https://calendly.com/catielanier/30min"
 						target="_blank"
