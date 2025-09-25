@@ -116,7 +116,7 @@
 	p.tools {
 		margin-top: 0;
 		font-size: 1.5rem;
-		color: #c28485;
+		color: #6b4e5c;
 	}
 	.link {
 		font-family: "Arvo", serif;
@@ -128,7 +128,7 @@
 		color: #f7a3b4;
 	}
 	span {
-		color: #303030;
+		color: #6b4e5c;
 		transition: all 0.3s ease-in-out;
 	}
 

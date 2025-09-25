@@ -49,7 +49,7 @@
 
 <div class="container">
 	<MenuBar />
-	<Header />
+	<Header {isKr} />
 	<main>
 		<Divider anchorId="skills" />
 		<Skills />

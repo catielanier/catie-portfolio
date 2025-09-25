@@ -1,4 +1,5 @@
 <script>
+	export let isKr;
 	import catie from "../assets/catie.jpg";
 	const languageGreetings = [
 		{ text: "Hello all", lang: "en" },
@@ -38,9 +39,13 @@
 			</p>
 
 			<p class="hero-links">
-				<a href="#portfolio">View my work</a>
+				{#if !isKr}
+					<a href="/resume.pdf" target="_blank"><span>View my resume</span></a>
+					<span aria-hidden="true">·</span>
+				{/if}
+				<a href="#portfolio"><span>View my work</span></a>
 				<span aria-hidden="true">·</span>
-				<a href="#contact">Work with me</a>
+				<a href="#contact"><span>Work with me</span></a>
 			</p>
 		</div>
 
@@ -90,17 +95,15 @@
 
 	.hero-links a {
 		text-decoration: underline;
-		color: #c28485; /* your rose accent — darker, readable */
-		transition: color 0.2s ease-in-out;
+		color: #f7a3b4;
+	}
+	.hero-links a span {
+		color: #6b4e5c;
+		transition: all 0.3s ease-in-out;
 	}
 
-	.hero-links a:hover {
+	.hero-links a:hover span {
 		color: #f7a3b4; /* lighter pink on hover */
-	}
-
-	.hero-links span {
-		color: #303030; /* neutral dot */
-		opacity: 0.6;
 	}
 
 	img {
