@@ -18,11 +18,12 @@
 
 <style>
 	.footer-container {
+		padding-top: 40px;
 		padding-bottom: 20px;
 		background: #fdecef;
 	}
 	footer {
-		margin: 40px auto 0;
+		margin: 0 auto;
 		width: 100%;
 		max-width: 1280px;
 		background: #6b4e5c;

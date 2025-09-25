@@ -30,7 +30,7 @@
 		);
 	}
 	.divider {
-		margin: 6rem 0;
+		padding: 6rem 0;
 		position: relative;
 		height: 3.5rem;
 	}
@@ -59,6 +59,7 @@
 		);
 	}
 	.divider img {
+		margin: 6rem 0;
 		height: 3.5rem;
 		position: absolute;
 		top: 0;
