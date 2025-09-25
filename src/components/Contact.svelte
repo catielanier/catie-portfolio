@@ -272,8 +272,7 @@
 		font-family: "Comfortaa", serif;
 		text-transform: uppercase;
 		font-size: 1.6rem;
-		border-top-right-radius: 10px;
-		border-bottom-left-radius: 10px;
+		border-radius: 10px;
 		border: 0;
 		transition: all 1s;
 		color: #3a2f2f;
@@ -291,22 +290,28 @@
 		left: -1px;
 		border-top: 2px solid #e5a4b3;
 		border-left: 2px solid #e5a4b3;
+		border-top-left-radius: 10px;
 	}
 	button:before {
 		bottom: -1px;
 		right: -1px;
 		border-bottom: 2px solid #e5a4b3;
 		border-right: 2px solid #e5a4b3;
+		border-bottom-right-radius: 10px;
 	}
 	button:hover {
 		border-top-right-radius: 0px;
 		border-bottom-left-radius: 0px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
 		color: #e5a4b3;
 	}
 	button:hover:before,
 	button:hover:after {
 		width: 100%;
 		height: 100%;
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 	button:hover:before {
 		border-bottom-color: #ead7a3;
