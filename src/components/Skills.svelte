@@ -125,7 +125,7 @@
 	.skill {
 		text-align: center;
 		padding: 1rem;
-		border: 1px solid #fcccd3;
+		border: 1px solid #6b4e5c;
 		border-radius: 8px;
 		transition:
 			border-color 0.3s,
@@ -143,12 +143,12 @@
 	.skill p {
 		margin-top: 0.75rem;
 		font-size: 1.4rem;
-		color: #fcccd3;
+		color: #6b4e5c;
 		transition: color 0.3s;
 	}
 
 	.skill:hover {
-		border-color: #303030;
+		border-color: #ead7a3;
 		transform: translateY(-4px);
 	}
 

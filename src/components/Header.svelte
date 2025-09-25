@@ -79,6 +79,7 @@
 	h2.tagline {
 		font-size: 2.5rem;
 		line-height: 2.5rem;
+		color: #6b4e5c;
 	}
 
 	.hero-links {
