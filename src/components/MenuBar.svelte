@@ -62,7 +62,7 @@
 		list-style: none;
 		font-size: 2.4rem;
 		display: flex;
-		background: #c28485;
+		background: #6b4e5c;
 		justify-content: space-around;
 		margin: 0;
 		padding: 15px 0 20px;
@@ -72,12 +72,12 @@
 		text-transform: capitalize;
 	}
 	a {
-		color: #fff;
+		color: #ead7a3;
 		transition: all 0.3s ease-in-out;
 	}
 	a:hover {
 		text-decoration: none;
-		color: #303030;
+		color: #e5a4b3;
 	}
 
 	.menu {
@@ -85,7 +85,7 @@
 		width: 45px;
 		height: 45px;
 		z-index: 5;
-		background: #fcccd3;
+		background: #6b4e5c;
 		border-radius: 5px;
 	}
 
@@ -105,7 +105,7 @@
 		right: -100%;
 		transition: all 0.5s ease-in-out;
 		z-index: 10;
-		background: #c28485;
+		background: #6b4e5c;
 	}
 
 	.mobile-menu.show {
@@ -115,7 +115,7 @@
 	}
 
 	.show a {
-		color: #303030;
+		color: #ead7a3;
 	}
 
 	.close-menu {

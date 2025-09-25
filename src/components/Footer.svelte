@@ -24,10 +24,10 @@
 		margin: 40px auto 0;
 		width: 100%;
 		max-width: 1280px;
-		background: #c28485;
+		background: #6b4e5c;
 		font-family: "Neuton", sans-serif;
 		font-weight: 700;
-		color: #fff;
+		color: #fff9f5;
 		font-size: 2rem;
 		border-radius: 5px;
 		padding: 5px 10px 11.5px;
@@ -40,7 +40,7 @@
 	}
 
 	a {
-		color: #fff;
+		color: #fff9f5;
 		text-decoration: underline;
 	}
 
@@ -49,7 +49,7 @@
 	}
 
 	a:hover span {
-		color: #303030;
+		color: #ead7a3;
 	}
 	@media (max-width: 1280px) {
 		footer {

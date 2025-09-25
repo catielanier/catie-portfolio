@@ -25,8 +25,8 @@
 		<!-- ✅ replace your long bio with this single value line -->
 		<h2 class="tagline">
 			Freelance Software Engineer helping startups, esports orgs, and small
-			businesses build fast, clean apps and websites — serving the Greater Toronto Area and
-			Simcoe County.
+			businesses build fast, clean apps and websites — serving the Greater
+			Toronto Area and Simcoe County.
 		</h2>
 
 		<p>
@@ -86,6 +86,7 @@
 		grid-template-columns: 2fr 1fr;
 		grid-gap: 30px;
 		align-items: center;
+		background: #fdecef;
 	}
 
 	h2.tagline {

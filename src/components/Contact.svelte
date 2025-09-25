@@ -181,6 +181,9 @@
 </section>
 
 <style>
+	section {
+		background: #fdecef;
+	}
 	.voice-of-god {
 		position: fixed;
 		top: 0;
@@ -258,7 +261,7 @@
 		margin-top: 15px;
 		position: relative;
 		padding: 15px 20px;
-		background: #fcccd3;
+		background: #fdecef;
 		font-family: "Comfortaa", serif;
 		text-transform: uppercase;
 		font-size: 1.6rem;
@@ -266,7 +269,7 @@
 		border-bottom-left-radius: 10px;
 		border: 0;
 		transition: all 1s;
-		color: #c28485;
+		color: #3a2f2f;
 	}
 	button:after,
 	button:before {
@@ -279,23 +282,32 @@
 	button:after {
 		top: -1px;
 		left: -1px;
-		border-top: 2px solid #c28485;
-		border-left: 2px solid #c28485;
+		border-top: 2px solid #e5a4b3;
+		border-left: 2px solid #e5a4b3;
 	}
 	button:before {
 		bottom: -1px;
 		right: -1px;
-		border-bottom: 2px solid #c28485;
-		border-right: 2px solid #c28485;
+		border-bottom: 2px solid #e5a4b3;
+		border-right: 2px solid #e5a4b3;
 	}
 	button:hover {
 		border-top-right-radius: 0px;
 		border-bottom-left-radius: 0px;
+		color: #e5a4b3;
 	}
 	button:hover:before,
 	button:hover:after {
 		width: 100%;
 		height: 100%;
+	}
+	button:hover:before {
+		border-bottom-color: #ead7a3;
+		border-right-color: #ead7a3;
+	}
+	button:hover:after {
+		border-top-color: #ead7a3;
+		border-left-color: #ead7a3;
 	}
 
 	textarea {

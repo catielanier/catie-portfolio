@@ -95,6 +95,7 @@
 <style>
 	section {
 		padding: 2rem 1rem;
+		background: #fff9f5;
 	}
 
 	.category {

@@ -47,6 +47,9 @@
 </section>
 
 <style>
+	section {
+		background: #fff9f5;
+	}
 	.carousel-wrapper footer {
 		text-align: right;
 		font-style: italic;

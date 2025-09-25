@@ -50,7 +50,7 @@
 			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "job-hunt",
 			file: jobHunt,
-		}
+		},
 	];
 </script>
 
@@ -91,6 +91,9 @@
 </section>
 
 <style>
+	section {
+		background: #fdecef;
+	}
 	h3 {
 		font-family: "Comfortaa", sans-serif;
 		font-size: 3.2rem;
@@ -136,7 +139,7 @@
 		margin-top: 15px;
 		position: relative;
 		padding: 15px 20px;
-		background: #fcccd3;
+		background: #fdecef;
 		font-family: "Comfortaa", serif;
 		text-transform: uppercase;
 		font-size: 1.6rem;
@@ -144,7 +147,7 @@
 		border-bottom-left-radius: 10px;
 		border: 0;
 		transition: all 1s;
-		color: #c28485;
+		color: #3a2f2f;
 	}
 	a.button:after,
 	a.button:before {
@@ -157,24 +160,35 @@
 	a.button:after {
 		top: -1px;
 		left: -1px;
-		border-top: 2px solid #c28485;
-		border-left: 2px solid #c28485;
+		border-top: 2px solid #e5a4b3;
+		border-left: 2px solid #e5a4b3;
 	}
 	a.button:before {
 		bottom: -1px;
 		right: -1px;
-		border-bottom: 2px solid #c28485;
-		border-right: 2px solid #c28485;
+		border-bottom: 2px solid #e5a4b3;
+		border-right: 2px solid #e5a4b3;
 	}
 	a.button:hover {
 		border-top-right-radius: 0px;
 		border-bottom-left-radius: 0px;
 		text-decoration: none;
+		color: #e5a4b3;
 	}
 	a.button:hover:before,
 	a.button:hover:after {
 		width: 100%;
 		height: 100%;
+	}
+
+	a.button:hover:before {
+		border-bottom: 2px solid #ead7a3;
+		border-right: 2px solid #ead7a3;
+	}
+
+	a.button:hover:after {
+		border-top: 2px solid #ead7a3;
+		border-left: 2px solid #ead7a3;
 	}
 	@media (max-width: 768px) {
 		.grid-container {
