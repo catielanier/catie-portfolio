@@ -75,27 +75,33 @@
 </script>
 
 <section>
-	<h2>Skills</h2>
-
-	{#each categories as category}
-		<div class="category">
-			<h3>{category}</h3>
-			<div class="skills-grid">
-				{#each skills.filter((s) => s.type === category) as skill}
-					<div class="skill">
-						<img src={skill.file} alt={skill.name} />
-						<p>{skill.name}</p>
-					</div>
-				{/each}
+	<div class="container">
+		<h2>Skills</h2>
+		{#each categories as category}
+			<div class="category">
+				<h3>{category}</h3>
+				<div class="skills-grid">
+					{#each skills.filter((s) => s.type === category) as skill}
+						<div class="skill">
+							<img src={skill.file} alt={skill.name} />
+							<p>{skill.name}</p>
+						</div>
+					{/each}
+				</div>
 			</div>
-		</div>
-	{/each}
+		{/each}
+	</div>
 </section>
 
 <style>
 	section {
 		padding: 2rem 1rem;
 		background: #fff9f5;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
 	}
 
 	.category {

@@ -23,32 +23,38 @@
 </script>
 
 <section>
-	<h2>Testimonials</h2>
-	<p>What people say about me:</p>
-	<div class="carousel-wrapper">
-		<Carousel
-			bind:this={carousel}
-			autoplay
-			pauseOnFocus
-			autoplayDuration={8000}
-		>
-			{#each testimonials as testimonial}
-				<div class="testimonial-slide">
-					<blockquote>
-						<p>{testimonial.text}</p>
-						<footer>
-							— {testimonial.name}, {testimonial.company}
-						</footer>
-					</blockquote>
-				</div>
-			{/each}
-		</Carousel>
+	<div class="container">
+		<h2>Testimonials</h2>
+		<p>What people say about me:</p>
+		<div class="carousel-wrapper">
+			<Carousel
+				bind:this={carousel}
+				autoplay
+				pauseOnFocus
+				autoplayDuration={8000}
+			>
+				{#each testimonials as testimonial}
+					<div class="testimonial-slide">
+						<blockquote>
+							<p>{testimonial.text}</p>
+							<footer>
+								— {testimonial.name}, {testimonial.company}
+							</footer>
+						</blockquote>
+					</div>
+				{/each}
+			</Carousel>
+		</div>
 	</div>
 </section>
 
 <style>
 	section {
 		background: #fff9f5;
+	}
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
 	}
 	.carousel-wrapper footer {
 		text-align: right;

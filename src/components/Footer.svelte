@@ -19,6 +19,7 @@
 <style>
 	.footer-container {
 		padding-bottom: 20px;
+		background: #fdecef;
 	}
 	footer {
 		margin: 40px auto 0;

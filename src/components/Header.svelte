@@ -12,60 +12,62 @@
 </script>
 
 <header id="home">
-	<div>
-		<h1>
-			<div id="typed-strings">
-				{#each languageGreetings as greeting}
-					<p class={`greeting-${greeting.lang}`}>{greeting.text}!</p>
-				{/each}
+	<div class="container">
+		<div>
+			<h1>
+				<div id="typed-strings">
+					{#each languageGreetings as greeting}
+						<p class={`greeting-${greeting.lang}`}>{greeting.text}!</p>
+					{/each}
+				</div>
+				<span id="typed" />
+			</h1>
+
+			<!-- ✅ replace your long bio with this single value line -->
+			<h2 class="tagline">
+				Freelance Software Engineer helping startups, esports orgs, and small
+				businesses build fast, clean apps and websites — serving the Greater
+				Toronto Area and Simcoe County.
+			</h2>
+
+			<p>
+				My name is Catie Lanier, and I am a multilingual (English, Mandarin,
+				Korean, Japanese, Esperanto) full stack developer based in Toronto. I am
+				a graduate of Juno College's Web Development Immersive, and am
+				completely fluent in Front End and Full Stack development.
+			</p>
+
+			<p>
+				I have a deep passion for writing clean JavaScript, and React and Vue.js
+				are two of my favourite frameworks to work in. I also enjoy learning and
+				teaching new technologies and frameworks that help make designs more
+				effective and user friendly.
+			</p>
+
+			<p>
+				Before starting my career in tech, I lived in China and South Korea for
+				5 years teaching English as a Second Language, and am leveraging my
+				interpersonal and communication skills to develop clean code. Alongside
+				knowledge and skills, I bring curiosity, enthusiasm, and a whole lot of
+				care to everything I do.
+			</p>
+
+			<p>
+				Outside of coding, I enjoy playing video games, playing bass guitar,
+				ballet, fashion, and spending time with my cats.
+			</p>
+
+			<p class="hero-links">
+				<a href="#portfolio">View my work</a>
+				<span aria-hidden="true">·</span>
+				<a href="#contact">Work with me</a>
+			</p>
+		</div>
+
+		<div>
+			<div class="header-image">
+				<img src={catie} alt="Catie Lanier" />
 			</div>
-			<span id="typed" />
-		</h1>
-
-		<!-- ✅ replace your long bio with this single value line -->
-		<h2 class="tagline">
-			Freelance Software Engineer helping startups, esports orgs, and small
-			businesses build fast, clean apps and websites — serving the Greater
-			Toronto Area and Simcoe County.
-		</h2>
-
-		<p>
-			My name is Catie Lanier, and I am a multilingual (English, Mandarin,
-			Korean, Japanese, Esperanto) full stack developer based in Toronto. I am a
-			graduate of Juno College's Web Development Immersive, and am completely
-			fluent in Front End and Full Stack development.
-		</p>
-
-		<p>
-			I have a deep passion for writing clean JavaScript, and React and Vue.js
-			are two of my favourite frameworks to work in. I also enjoy learning and
-			teaching new technologies and frameworks that help make designs more
-			effective and user friendly.
-		</p>
-
-		<p>
-			Before starting my career in tech, I lived in China and South Korea for 5
-			years teaching English as a Second Language, and am leveraging my
-			interpersonal and communication skills to develop clean code. Alongside
-			knowledge and skills, I bring curiosity, enthusiasm, and a whole lot of
-			care to everything I do.
-		</p>
-
-		<p>
-			Outside of coding, I enjoy playing video games, playing bass guitar,
-			ballet, fashion, and spending time with my cats.
-		</p>
-
-		<p class="hero-links">
-			<a href="#portfolio">View my work</a>
-			<span aria-hidden="true">·</span>
-			<a href="#contact">Work with me</a>
-		</p>
-	</div>
-
-	<div>
-		<div class="header-image">
-			<img src={catie} alt="Catie Lanier" />
 		</div>
 	</div>
 </header>
@@ -81,12 +83,17 @@
 	}
 
 	header {
+		background: #fdecef;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
 		padding-top: 120px;
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		grid-gap: 30px;
 		align-items: center;
-		background: #fdecef;
 	}
 
 	h2.tagline {

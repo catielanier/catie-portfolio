@@ -55,44 +55,50 @@
 </script>
 
 <section>
-	<h2>Portfolio</h2>
-	{#each portfolioPieces as piece, index}
-		<div class="grid-container" key={index}>
-			<div>
-				<h3>{piece.title}</h3>
-				<p class="tools">{piece.tools}</p>
-				<p>{piece.description}</p>
-				<div class="link">
-					<a href={piece.previewLink} target="_blank">
-						<span>View the project online.</span>
-					</a>
+	<div class="container">
+		<h2>Portfolio</h2>
+		{#each portfolioPieces as piece, index}
+			<div class="grid-container" key={index}>
+				<div>
+					<h3>{piece.title}</h3>
+					<p class="tools">{piece.tools}</p>
+					<p>{piece.description}</p>
+					<div class="link">
+						<a href={piece.previewLink} target="_blank">
+							<span>View the project online.</span>
+						</a>
+					</div>
+					<div class="link">
+						<a
+							href={`https://github.com/catielanier/${piece.githubRepo}`}
+							target="_blank"
+						>
+							<span>View the source code.</span>
+						</a>
+					</div>
 				</div>
-				<div class="link">
-					<a
-						href={`https://github.com/catielanier/${piece.githubRepo}`}
-						target="_blank"
-					>
-						<span>View the source code.</span>
-					</a>
-				</div>
+				<div><img src={piece.file} alt={piece.title} /></div>
 			</div>
-			<div><img src={piece.file} alt={piece.title} /></div>
+		{/each}
+		<div>
+			<a href="https://github.com/catielanier" target="_blank" class="button">
+				<span />
+				<span />
+				<span />
+				<span />
+				See What I'm Working On
+			</a>
 		</div>
-	{/each}
-	<div>
-		<a href="https://github.com/catielanier" target="_blank" class="button">
-			<span />
-			<span />
-			<span />
-			<span />
-			See What I'm Working On
-		</a>
 	</div>
 </section>
 
 <style>
 	section {
 		background: #fdecef;
+	}
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
 	}
 	h3 {
 		font-family: "Comfortaa", sans-serif;

@@ -25,13 +25,15 @@
 	</a>
 </div>
 <nav>
-	<ul>
-		{#each navBarItems as item}
-			<a href={item.location}>
-				<li>{item.label}</li>
-			</a>
-		{/each}
-	</ul>
+	<div class="container">
+		<ul>
+			{#each navBarItems as item}
+				<a href={item.location}>
+					<li>{item.label}</li>
+				</a>
+			{/each}
+		</ul>
+	</div>
 </nav>
 <div class={!menu ? "mobile-menu" : "mobile-menu show"}>
 	<div class="close-menu">
@@ -52,9 +54,13 @@
 	nav {
 		position: fixed;
 		top: 20px;
-		max-width: 1280px;
 		width: 100%;
 		z-index: 5;
+	}
+	nav .container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 20px;
 	}
 	ul {
 		font-family: "Neuton", sans-serif;
