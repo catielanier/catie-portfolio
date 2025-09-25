@@ -1,9 +1,10 @@
 <script>
 	export let anchorId;
+	export let isInverse = false;
 	import monogram from "../assets/monogram.png";
 </script>
 
-<div class="divider" id={anchorId}>
+<div class="divider {isInverse && 'inverse'}" id={anchorId}>
 	<div class="div-transparent" />
 	<img src={monogram} alt="monogram" />
 </div>
@@ -13,6 +14,19 @@
 		margin: 6rem 0;
 		position: relative;
 		height: 3.5rem;
+		background-image: linear-gradient(
+			to bottom,
+			rgb(253, 236, 239),
+			rgb(255, 249, 245)
+		);
+	}
+
+	.divider.inverse {
+		background-image: linear-gradient(
+			to bottom,
+			rgb(255, 249, 245),
+			rgb(253, 236, 239)
+		);
 	}
 
 	.div-transparent {

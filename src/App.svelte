@@ -53,13 +53,13 @@
 	<main>
 		<Divider anchorId="skills" />
 		<Skills />
-		<Divider anchorId="portfolio" />
+		<Divider anchorId="portfolio" isInverse={true} />
 		<Portfolio />
 		<Divider anchorId="testimonials" />
 		<Testimonials />
 		<!-- <Divider anchorId="blog" /> -->
 		<!-- <Blog {posts} /> -->
-		<Divider anchorId="contact" />
+		<Divider anchorId="contact" isInverse={true} />
 		<Contact {ip} {isKr} />
 	</main>
 </div>
