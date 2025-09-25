@@ -4,16 +4,17 @@
 	import monogram from "../assets/monogram.png";
 </script>
 
-<div class="divider {isInverse && 'inverse'}" id={anchorId}>
-	<div class="div-transparent" />
-	<img src={monogram} alt="monogram" />
-</div>
+<section class={isInverse ? "inverse" : ""}>
+	<div class="container">
+		<div class="divider" id={anchorId}>
+			<div class="div-transparent" />
+			<img src={monogram} alt="monogram" />
+		</div>
+	</div>
+</section>
 
 <style>
-	.divider {
-		margin: 6rem 0;
-		position: relative;
-		height: 3.5rem;
+	section {
 		background-image: linear-gradient(
 			to bottom,
 			rgb(253, 236, 239),
@@ -21,12 +22,22 @@
 		);
 	}
 
-	.divider.inverse {
+	section.inverse {
 		background-image: linear-gradient(
 			to bottom,
 			rgb(255, 249, 245),
 			rgb(253, 236, 239)
 		);
+	}
+	.divider {
+		margin: 6rem 0;
+		position: relative;
+		height: 3.5rem;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
 	}
 
 	.div-transparent {
