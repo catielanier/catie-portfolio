@@ -14,47 +14,27 @@
 <header id="home">
 	<div class="container">
 		<div>
-			<h1>
-				<div id="typed-strings">
-					{#each languageGreetings as greeting}
-						<p class={`greeting-${greeting.lang}`}>{greeting.text}!</p>
-					{/each}
-				</div>
-				<span id="typed" />
-			</h1>
+			<h1>Software Engineer · Creative Developer</h1>
 
 			<!-- ✅ replace your long bio with this single value line -->
 			<h2 class="tagline">
-				Freelance Software Engineer helping startups, esports orgs, and small
-				businesses build fast, clean apps and websites — serving the Greater
-				Toronto Area and Simcoe County.
+				Building fast, clean apps with a touch of elegance — serving the Greater
+				Toronto Area and beyond.
 			</h2>
 
 			<p>
-				My name is Catie Lanier, and I am a multilingual (English, Mandarin,
-				Korean, Japanese, Esperanto) full stack developer based in Toronto. I am
-				a graduate of Juno College's Web Development Immersive, and am
-				completely fluent in Front End and Full Stack development.
+				I’m Catie Lanier, a multilingual full stack developer in English,
+				Mandarin, and Korean. My work bridges technical precision with
+				creativity, helping startups, esports organizations, and small
+				businesses launch digital experiences that feel as polished as they are
+				powerful.
 			</p>
 
 			<p>
-				I have a deep passion for writing clean JavaScript, and React and Vue.js
-				are two of my favourite frameworks to work in. I also enjoy learning and
-				teaching new technologies and frameworks that help make designs more
-				effective and user friendly.
-			</p>
-
-			<p>
-				Before starting my career in tech, I lived in China and South Korea for
-				5 years teaching English as a Second Language, and am leveraging my
-				interpersonal and communication skills to develop clean code. Alongside
-				knowledge and skills, I bring curiosity, enthusiasm, and a whole lot of
-				care to everything I do.
-			</p>
-
-			<p>
-				Outside of coding, I enjoy playing video games, playing bass guitar,
-				ballet, fashion, and spending time with my cats.
+				With a background in both software engineering and the performing arts,
+				I bring curiosity, design sense, and a collaborative spirit to every
+				project. Whether it’s React, Vue, or full stack systems, my focus is on
+				delivering code that’s clean, maintainable, and delightful to use.
 			</p>
 
 			<p class="hero-links">
@@ -76,8 +56,8 @@
 	/* keep your font family + sizes, but remove the fixed height */
 	h1 {
 		font-family: "Comfortaa", sans-serif;
-		font-size: 7.1rem;
-		line-height: 1.05;
+		font-size: 3.8rem;
+		line-height: 1.8;
 		/* height: 7.2rem;  ⟵ remove this to stop clipping/awkward spacing */
 		margin: 0 0 0.25rem;
 	}
