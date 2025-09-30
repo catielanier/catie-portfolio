@@ -245,22 +245,33 @@
 	input,
 	textarea {
 		width: 100%;
-		background: #fcccd3;
-		color: #303030;
+		background: #fff9f5;
+		color: #3a2f2f;
 		border: 0;
 		border-radius: 5px;
-		border-bottom: 2px solid #f7a3b4;
+		padding: 14px 16px;
+		outline: none;
+		border: 1px solid #c9c6d9;
 		font-family: "Arvo", serif;
 		font-size: 1.8rem;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
 		transition: 0.5 all ease-in-out;
 	}
 	input:focus,
 	textarea:focus {
-		border-bottom: 2px solid #c28485;
+		outline: none;
+		border: 1px solid #e5a4b3;
+	}
+	input:focus-visible,
+	textarea:focus-visible {
+		border-color: var(--pink);
+		box-shadow: 0 0 0 3px color-mix(in oklab, #ead7a3 60%, transparent);
+		outline: none;
+		background: white;
 	}
 	input::placeholder,
 	textarea::placeholder {
-		color: #303030;
+		color: color-mix(in oklab, #3a2f2f 55%, white);
 	}
 
 	button {
