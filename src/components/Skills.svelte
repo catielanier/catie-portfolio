@@ -111,7 +111,6 @@
 		font-family: "Comfortaa", sans-serif;
 		font-size: 2.1rem;
 		margin-bottom: 1rem;
-		/* removed uppercase transform */
 		letter-spacing: 0.05em;
 		color: #333;
 	}
@@ -125,39 +124,16 @@
 	.skill {
 		text-align: center;
 		padding: 1rem;
-		border: 1px solid #6b4e5c;
-		border-radius: 8px;
-		transition:
-			border-color 0.3s,
-			transform 0.3s;
 	}
 
 	.skill img {
 		height: 8rem;
 		max-width: 90%;
-		transition:
-			transform 0.3s,
-			filter 0.3s;
 	}
 
 	.skill p {
 		margin-top: 0.75rem;
 		font-size: 1.4rem;
 		color: #6b4e5c;
-		transition: color 0.3s;
-	}
-
-	.skill:hover {
-		border-color: #ead7a3;
-		transform: translateY(-4px);
-	}
-
-	.skill:hover img {
-		filter: brightness(1.1);
-		transform: scale(1.05);
-	}
-
-	.skill:hover p {
-		color: #303030;
 	}
 </style>
