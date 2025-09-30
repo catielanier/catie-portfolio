@@ -1,15 +1,6 @@
 <script>
 	export let isKr;
 	import catie from "../assets/catie.jpg";
-	const languageGreetings = [
-		{ text: "Hello all", lang: "en" },
-		{ text: "여러분 안녕하세요", lang: "ko" },
-		{ text: "大家好", lang: "zh" },
-		{ text: "皆さんこんにちは", lang: "ja" },
-		{ text: "Bonjour à tous", lang: "fr" },
-		{ text: "Saluton al ĉiuj", lang: "eo" },
-		{ text: "Halo a h-uile duine", lang: "gd" },
-	];
 </script>
 
 <header id="home">
