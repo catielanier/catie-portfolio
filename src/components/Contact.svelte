@@ -7,11 +7,13 @@
 
 	export let ip;
 	export let isKr;
+
 	let name = "";
 	let email = "";
 	let message = "";
 	let voiceOfGod = false;
 	let formSuccess = false;
+
 	const submitForm = () => {
 		axios
 			.post(
@@ -19,18 +21,17 @@
 				{ name, email, message, ip },
 				{ headers: { Accept: "application/json" } },
 			)
-			.then((_) => {
+			.then(() => {
 				if (!voiceOfGod) {
 					formSuccess = true;
-					setTimeout(() => {
-						formSuccess = false;
-					}, 5000);
+					setTimeout(() => (formSuccess = false), 5000);
 				}
 			})
 			.catch((err) => {
 				console.log(err);
 			});
 	};
+
 	const validateMessage = () => {
 		if (isKr && email.includes("@gmail.com")) {
 			voiceOfGod = true;
@@ -44,8 +45,13 @@
 </script>
 
 {#if voiceOfGod}
-	<div class="voice-of-god">
-		<h2>
+	<div
+		class="voice-of-god"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="vog-title"
+	>
+		<h2 id="vog-title">
 			<div id="voice-of-god">
 				<span>
 					윤미,<br /><br />
@@ -67,47 +73,52 @@
 		</h2>
 	</div>
 {/if}
+
 {#if formSuccess}
-	<div class="form-success">
+	<div class="form-success" role="status" aria-live="polite">
 		<h6>Email has been sent!</h6>
 	</div>
 {/if}
-<section>
-	<h2>Contact</h2>
-	<p>
-		Let's build something together. I'm currently available for freelance
-		contracts — remote, hybrid, or in-person across the Greater Toronto Area and
-		Simcoe County. Whether you need a web app, esports tool, or custom API,
-		reach out below.
-	</p>
-	<div class="grid-container">
-		<div>
-			<p class="email">Email: hello@catielanier.ca</p>
-			{#if !isKr}
-				<p>Prefer to talk directly?</p>
-				<p>
-					<a
-						href="https://calendly.com/catielanier/30min"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="calendly"
-					>
-						Schedule a free call with me
-					</a>.
-				</p>
-			{/if}
 
-			<div class="contact-gap">
-				<div>
+<section class="contact">
+	<div class="container">
+		<h2>Contact</h2>
+		<p class="lede">
+			Let's build something together. I'm currently available for freelance
+			contracts — remote, hybrid, or in-person across the Greater Toronto Area
+			and Simcoe County. Whether you need a web app, esports tool, or custom
+			API, reach out below.
+		</p>
+
+		<div class="grid">
+			<!-- Left: details + socials -->
+			<div class="pane info">
+				<p class="email">
+					Email: <a href="mailto:hello@catielanier.ca">hello@catielanier.ca</a>
+				</p>
+
+				{#if !isKr}
+					<p class="direct">Prefer to talk directly?</p>
+					<p class="direct">
+						<a
+							href="https://calendly.com/catielanier/30min"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="calendly"
+						>
+							<span> Schedule a free call with me </span>
+						</a>.
+					</p>
+				{/if}
+
+				<div class="socials" aria-label="Social links">
 					<a
 						href="https://github.com/catielanier"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src={github} alt="Github" />
+						<img src={github} alt="GitHub" />
 					</a>
-				</div>
-				<div>
 					<a
 						href="https://linkedin.com/in/catielanier"
 						target="_blank"
@@ -115,8 +126,6 @@
 					>
 						<img src={linkedin} alt="LinkedIn" />
 					</a>
-				</div>
-				<div>
 					<a
 						href="https://instagram.com/ohohcatie"
 						target="_blank"
@@ -124,8 +133,6 @@
 					>
 						<img src={instagram} alt="Instagram" />
 					</a>
-				</div>
-				<div>
 					<a
 						href="https://fiverr.com/catie_lanier"
 						target="_blank"
@@ -135,138 +142,208 @@
 					</a>
 				</div>
 			</div>
-		</div>
-		<div>
-			{#if !isKr}
-				<form on:submit|preventDefault={validateMessage}>
-					<input
-						type="text"
-						name="name"
-						bind:value={name}
-						required
-						placeholder="Your name"
-					/>
-					<input
-						type="email"
-						name="email"
-						bind:value={email}
-						required
-						placeholder="Email address"
-					/>
-					<textarea
-						placeholder="Tell me about your project (scope, timeline, goals)"
-						name="message"
-						bind:value={message}
-						required
-						cols="30"
-						rows="10"
-					/>
-					<input type="hidden" name="ip" bind:value={ip} />
-					<input
-						type="hidden"
-						name="voice of god activated"
-						bind:value={voiceOfGod}
-					/>
-					<button type="submit">
-						<span />
-						<span />
-						<span />
-						<span />
-						Send email
-					</button>
-				</form>
-			{/if}
+
+			<!-- Right: form -->
+			<div class="pane form-pane">
+				{#if !isKr}
+					<form on:submit|preventDefault={validateMessage} novalidate>
+						<label class="sr-only" for="name">Your name</label>
+						<input
+							id="name"
+							type="text"
+							name="name"
+							bind:value={name}
+							required
+							autocomplete="name"
+							placeholder="Your name"
+							inputmode="text"
+						/>
+
+						<label class="sr-only" for="email">Email address</label>
+						<input
+							id="email"
+							type="email"
+							name="email"
+							bind:value={email}
+							required
+							autocomplete="email"
+							placeholder="Email address"
+							inputmode="email"
+						/>
+
+						<label class="sr-only" for="message">Message</label>
+						<textarea
+							id="message"
+							placeholder="Tell me about your project (scope, timeline, goals)"
+							name="message"
+							bind:value={message}
+							required
+							rows="8"
+						></textarea>
+
+						<!-- honeypot / meta -->
+						<input type="hidden" name="ip" bind:value={ip} />
+						<input
+							type="hidden"
+							name="voice of god activated"
+							bind:value={voiceOfGod}
+						/>
+
+						<button type="submit">
+							<span></span><span></span><span></span><span></span>
+							Send email
+						</button>
+					</form>
+				{/if}
+			</div>
 		</div>
 	</div>
 </section>
 
 <style>
-	.voice-of-god {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100vh;
-		background: black;
-		color: white;
-		z-index: 999;
+	/* ===== section & container ===== */
+	.contact {
+		background: #fdecef;
+		padding-block: clamp(28px, 6vw, 72px);
 	}
-	.voice-of-god h2 {
-		font-size: 3.8rem;
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding-left: max(12px, env(safe-area-inset-left));
+		padding-right: max(12px, env(safe-area-inset-right));
 	}
-	.form-success {
-		z-index: 25;
-		position: fixed;
-		bottom: 100px;
-		left: 50%;
-		transform: translateX(-50%);
-		background-color: #c28485;
-		color: white;
-		padding: 5px 10px;
-		border-radius: 5px;
+
+	/* headings/body */
+	h2 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: clamp(22px, 3.2vw, 32px);
+		font-weight: 600;
+		margin: 0 0 0.5rem;
+		color: #3a2f2f;
 	}
-	.form-success h6 {
-		margin: 0;
-		font-size: 1.8rem;
-		font-family: "Arvo", serif;
+	.lede {
+		font-family: "Work Sans", sans-serif;
+		font-size: clamp(14px, 1.8vw, 18px);
+		margin: 0 0 1rem;
+		color: #3a2f2f;
 	}
-	.grid-container {
+
+	/* ===== responsive grid ===== */
+	.grid {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr; /* mobile first */
+		gap: clamp(16px, 3.5vw, 32px);
+		align-items: start;
 	}
+	@media (min-width: 900px) {
+		.grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.pane {
+		min-width: 0;
+	}
+
+	/* ===== info pane ===== */
 	.email {
-		font-family: "Comfortaa", sans-serif;
-		font-size: 1.7rem;
-		margin-top: 35px;
+		font-family: "Work Sans", sans-serif;
+		margin-top: clamp(16px, 3vw, 35px);
+		font-size: clamp(16px, 1.8vw, 18px);
 	}
-	.contact-gap {
-		margin-top: 35px;
-		max-width: 225px;
-		width: 100%;
+	.email a {
+		color: #3a2f2f;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.direct {
+		margin: 0.25rem 0;
+		font-size: clamp(14px, 1.8vw, 18px);
+	}
+
+	.calendly {
+		text-decoration: underline;
+		color: #f7a3b4;
+		transition: color 0.2s ease-in-out;
+	}
+	.calendly span {
+		color: #6b4e5c;
+		transition: color 0.3s ease-in-out;
+	}
+	.calendly:hover span {
+		color: #f7a3b4;
+	}
+
+	.socials {
+		margin-top: clamp(20px, 4vw, 35px);
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-gap: 20px;
+		grid-template-columns: repeat(4, minmax(40px, 1fr)); /* exactly 4 icons */
+		gap: 16px;
+		max-width: 280px;
 	}
-	.contact-gap div img {
+	.socials img {
 		width: 100%;
+		height: auto;
+		display: block;
 	}
+
+	/* ===== form fields (kept button styling) ===== */
+	form > * + * {
+		margin-top: 12px;
+	}
+
 	input,
 	textarea {
 		width: 100%;
-		background: #fcccd3;
-		color: #303030;
-		border: 0;
-		border-radius: 5px;
-		border-bottom: 2px solid #f7a3b4;
-		font-family: "Arvo", serif;
-		font-size: 1.8rem;
-		transition: 0.5 all ease-in-out;
+		background: #fff9f5;
+		color: #3a2f2f;
+		border: 1px solid #c9c6d9;
+		border-radius: 12px;
+		padding: 14px 16px;
+		outline: none;
+		font-family: "Work Sans", sans-serif;
+		font-size: clamp(16px, 1.8vw, 19px);
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
+		transition:
+			border-color 0.15s ease,
+			box-shadow 0.15s ease,
+			background-color 0.15s ease;
 	}
-	input:focus,
-	textarea:focus {
-		border-bottom: 2px solid #c28485;
+	input:hover,
+	textarea:hover {
+		border-color: #e5a4b3;
+	}
+	input:focus-visible,
+	textarea:focus-visible {
+		border-color: #e5a4b3;
+		box-shadow: 0 0 0 3px color-mix(in oklab, #ead7a3 60%, transparent);
+		background: white;
+	}
+	textarea {
+		resize: vertical;
+		min-height: clamp(160px, 24vw, 220px);
 	}
 	input::placeholder,
 	textarea::placeholder {
-		color: #303030;
+		color: color-mix(in oklab, #3a2f2f 55%, white);
+		opacity: 0.9;
 	}
 
+	/* keep your button visuals exactly as before */
 	button {
 		cursor: pointer;
 		margin-top: 15px;
 		position: relative;
 		padding: 15px 20px;
-		background: #fcccd3;
-		font-family: "Comfortaa", serif;
+		background: #fdecef;
+		font-family: "Work Sans", sans-serif;
 		text-transform: uppercase;
-		font-size: 1.6rem;
-		border-top-right-radius: 10px;
-		border-bottom-left-radius: 10px;
+		font-size: 1.7rem;
+		border-radius: 12px;
 		border: 0;
 		transition: all 1s;
-		color: #c28485;
+		color: #3a2f2f;
 	}
 	button:after,
 	button:before {
@@ -279,44 +356,84 @@
 	button:after {
 		top: -1px;
 		left: -1px;
-		border-top: 2px solid #c28485;
-		border-left: 2px solid #c28485;
+		border-top: 2px solid #e5a4b3;
+		border-left: 2px solid #e5a4b3;
+		border-top-left-radius: 10px;
 	}
 	button:before {
 		bottom: -1px;
 		right: -1px;
-		border-bottom: 2px solid #c28485;
-		border-right: 2px solid #c28485;
+		border-bottom: 2px solid #e5a4b3;
+		border-right: 2px solid #e5a4b3;
+		border-bottom-right-radius: 10px;
 	}
 	button:hover {
-		border-top-right-radius: 0px;
-		border-bottom-left-radius: 0px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		color: #e5a4b3;
 	}
-	button:hover:before,
+	button:hover:before {
+		border-bottom-color: #ead7a3;
+		border-right-color: #ead7a3;
+	}
 	button:hover:after {
+		border-top-color: #ead7a3;
+		border-left-color: #ead7a3;
+	}
+
+	/* ===== toast & overlay ===== */
+	.form-success {
+		z-index: 25;
+		position: fixed;
+		bottom: 24px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #c28485;
+		color: white;
+		padding: 8px 12px;
+		border-radius: 8px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	}
+	.form-success h6 {
+		margin: 0;
+		font-size: 1.6rem;
+		font-family: "Arvo", serif;
+	}
+
+	.voice-of-god {
+		position: fixed;
+		inset: 0;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
+		background: black;
+		color: white;
+		z-index: 999;
+		display: grid;
+		place-items: center;
+		padding: 24px;
+	}
+	.voice-of-god h2 {
+		font-size: clamp(22px, 3.6vw, 38px);
+		margin: 0;
 	}
 
-	textarea {
-		resize: none;
-	}
-
-	a.calendly {
-		text-decoration: underline;
-		color: #c28485; /* your rose accent — darker, readable */
-		transition: color 0.2s ease-in-out;
-	}
-
-	a.calendly:hover {
-		color: #f7a3b4; /* lighter pink on hover */
+	/* a11y helper */
+	.sr-only {
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+		border: 0;
 	}
 
 	@media (max-width: 424px) {
-		.grid-container {
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 2fr;
-			grid-gap: 0;
+		/* stack already handled by grid 1fr; just tighten spacing */
+		.socials {
+			gap: 12px;
 		}
 	}
 </style>

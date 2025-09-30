@@ -25,13 +25,15 @@
 	</a>
 </div>
 <nav>
-	<ul>
-		{#each navBarItems as item}
-			<a href={item.location}>
-				<li>{item.label}</li>
-			</a>
-		{/each}
-	</ul>
+	<div class="container">
+		<ul>
+			{#each navBarItems as item}
+				<a href={item.location}>
+					<li>{item.label}</li>
+				</a>
+			{/each}
+		</ul>
+	</div>
 </nav>
 <div class={!menu ? "mobile-menu" : "mobile-menu show"}>
 	<div class="close-menu">
@@ -52,32 +54,37 @@
 	nav {
 		position: fixed;
 		top: 20px;
-		max-width: 1280px;
 		width: 100%;
 		z-index: 5;
 	}
+	nav .container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
 	ul {
-		font-family: "Neuton", sans-serif;
+		font-family: "Work Sans", sans-serif;
 		font-weight: 700;
 		list-style: none;
-		font-size: 2.4rem;
+		font-size: 1.9rem;
 		display: flex;
-		background: #c28485;
+		background: #6b4e5c;
 		justify-content: space-around;
 		margin: 0;
-		padding: 15px 0 20px;
+		padding: 15px 0;
 		border-radius: 5px;
+		letter-spacing: 0.5px;
 	}
 	li {
 		text-transform: capitalize;
 	}
 	a {
-		color: #fff;
+		color: #ead7a3;
 		transition: all 0.3s ease-in-out;
 	}
 	a:hover {
 		text-decoration: none;
-		color: #303030;
+		color: #e5a4b3;
 	}
 
 	.menu {
@@ -85,7 +92,6 @@
 		width: 45px;
 		height: 45px;
 		z-index: 5;
-		background: #fcccd3;
 		border-radius: 5px;
 	}
 
@@ -105,7 +111,7 @@
 		right: -100%;
 		transition: all 0.5s ease-in-out;
 		z-index: 10;
-		background: #c28485;
+		background: #6b4e5c;
 	}
 
 	.mobile-menu.show {
@@ -115,7 +121,7 @@
 	}
 
 	.show a {
-		color: #303030;
+		color: #ead7a3;
 	}
 
 	.close-menu {
@@ -134,7 +140,7 @@
 		display: flex;
 		height: 90vh;
 		width: 100%;
-		font-family: "Neuton", serif;
+		font-family: "Work Sans", sans-serif;
 		text-transform: capitalize;
 		font-size: 2.8rem;
 		flex-direction: column;
@@ -155,7 +161,7 @@
 			display: block;
 			position: fixed;
 			top: 0px;
-			left: 0px;
+			right: 0px;
 		}
 	}
 </style>

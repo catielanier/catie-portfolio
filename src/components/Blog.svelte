@@ -32,7 +32,7 @@
 	ul {
 		list-style-type: "~";
 		list-style-position: outside;
-		font-family: "Neuton", serif;
+		font-family: "Work Sans", sans-serif;
 		font-size: 2.7rem;
 		color: #c28485;
 		padding-bottom: 25px;

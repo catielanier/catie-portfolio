@@ -4,6 +4,7 @@
 	import jobHunt from "../assets/job-hunt.png";
 	import whiffCityScoreboard from "../assets/whiff-city-scoreboard.png";
 	import smrt from "../assets/smrt.png";
+
 	const portfolioPieces = [
 		{
 			title: "Elixir Day Spa",
@@ -50,105 +51,187 @@
 			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "job-hunt",
 			file: jobHunt,
-		}
+		},
 	];
 </script>
 
-<section>
-	<h2>Portfolio</h2>
-	{#each portfolioPieces as piece, index}
-		<div class="grid-container" key={index}>
-			<div>
-				<h3>{piece.title}</h3>
-				<p class="tools">{piece.tools}</p>
-				<p>{piece.description}</p>
-				<div class="link">
-					<a href={piece.previewLink} target="_blank">
-						<span>View the project online.</span>
-					</a>
+<section class="portfolio">
+	<div class="container">
+		<h2>Portfolio</h2>
+
+		{#each portfolioPieces as piece, i}
+			<article class="project">
+				<div class="media">
+					<img
+						src={piece.file}
+						alt={piece.title}
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
-				<div class="link">
-					<a
-						href={`https://github.com/catielanier/${piece.githubRepo}`}
-						target="_blank"
-					>
-						<span>View the source code.</span>
-					</a>
+
+				<div class="content">
+					<h3>{piece.title}</h3>
+					<p class="tools">{piece.tools}</p>
+					<p>{piece.description}</p>
+					<p class="links">
+						<a
+							href={piece.previewLink}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<span>View the project online.</span>
+						</a>
+					</p>
+					<p class="links">
+						<a
+							href={`https://github.com/catielanier/${piece.githubRepo}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<span>View the source code.</span>
+						</a>
+					</p>
 				</div>
-			</div>
-			<div><img src={piece.file} alt={piece.title} /></div>
+			</article>
+		{/each}
+
+		<div class="cta">
+			<a
+				href="https://github.com/catielanier"
+				target="_blank"
+				class="button"
+				rel="noopener noreferrer"
+			>
+				<span></span><span></span><span></span><span></span>
+				See What I'm Working On
+			</a>
 		</div>
-	{/each}
-	<div>
-		<a href="https://github.com/catielanier" target="_blank" class="button">
-			<span />
-			<span />
-			<span />
-			<span />
-			See What I'm Working On
-		</a>
 	</div>
 </section>
 
 <style>
-	h3 {
-		font-family: "Comfortaa", sans-serif;
-		font-size: 3.2rem;
-		font-weight: 700;
-		margin-bottom: 0;
+	/* section background stays full-bleed */
+	.portfolio {
+		background: #fdecef;
+		padding-block: clamp(28px, 6vw, 72px);
 	}
-	.grid-container {
-		margin: 20px auto;
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding-inline: clamp(16px, 4vw, 40px);
+	}
+
+	h2 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: clamp(22px, 3.2vw, 32px);
+		font-weight: 600;
+		margin: 0 0 0.75rem 0;
+		color: #3a2f2f;
+	}
+
+	/* project card layout */
+	.project {
 		display: grid;
-		grid-template-columns: 1.5fr 1fr;
-		grid-gap: 35px;
+		grid-template-columns: 1fr; /* mobile-first: stack */
+		gap: clamp(16px, 3.5vw, 32px);
 		align-items: center;
+		margin-block: clamp(20px, 4vw, 40px);
 	}
-	p.tools {
-		margin-top: 0;
-		font-size: 1.5rem;
-		color: #c28485;
+
+	/* image first on mobile */
+	.media {
+		order: 1;
 	}
-	.link {
-		font-family: "Arvo", serif;
-		font-size: 2rem;
-		margin-bottom: 25px;
+	.content {
+		order: 2;
 	}
-	.link a {
+
+	.media img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 8px;
+		box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+	}
+
+	h3 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: clamp(20px, 2.6vw, 32px);
+		font-weight: 700;
+		margin: 0;
+		color: #6b4e5c;
+	}
+	.tools {
+		margin: 0.25rem 0 0.5rem;
+		font-size: clamp(13px, 1.6vw, 15px);
+		color: #6b4e5c;
+	}
+	.links {
+		font-family: "Work Sans", sans-serif;
+		font-size: clamp(14px, 1.8vw, 18px);
+		margin: 0.35rem 0;
+	}
+	.links a {
 		text-decoration: underline;
 		color: #f7a3b4;
 	}
-	span {
-		color: #303030;
-		transition: all 0.3s ease-in-out;
+	.links a span {
+		color: #6b4e5c;
+		transition: color 0.2s ease;
 	}
-
-	.link a:hover span {
+	.links a:hover span {
 		color: #f7a3b4;
 	}
 
-	.grid-container img {
-		width: 100%;
+	/* tablet/desktop: two columns; alternate sides automatically */
+	@media (min-width: 900px) {
+		.project {
+			grid-template-columns: 1.1fr 0.9fr;
+		}
+		/* odd: image right, text left (default) */
+		.project:nth-child(odd) .media {
+			order: 2;
+		}
+		.project:nth-child(odd) .content {
+			order: 1;
+		}
+		/* even: image left, text right */
+		.project:nth-child(even) .media {
+			order: 1;
+		}
+		.project:nth-child(even) .content {
+			order: 2;
+		}
+
+		.media img {
+			border-radius: 10px;
+		}
 	}
 
+	/* CTA button (kept from your styles) */
+	.cta {
+		margin-top: clamp(16px, 4vw, 28px);
+	}
 	a.button {
 		cursor: pointer;
-		margin-top: 15px;
 		position: relative;
 		padding: 15px 20px;
-		background: #fcccd3;
-		font-family: "Comfortaa", serif;
+		background: #fdecef;
+		font-family: "Work Sans", sans-serif;
 		text-transform: uppercase;
-		font-size: 1.6rem;
-		border-top-right-radius: 10px;
-		border-bottom-left-radius: 10px;
+		font-size: 1.7rem;
+		border-radius: 10px;
 		border: 0;
 		transition: all 1s;
-		color: #c28485;
+		color: #3a2f2f;
+		text-decoration: none;
+		display: inline-block;
 	}
 	a.button:after,
 	a.button:before {
-		content: " ";
+		content: "";
 		width: 10px;
 		height: 10px;
 		position: absolute;
@@ -157,46 +240,28 @@
 	a.button:after {
 		top: -1px;
 		left: -1px;
-		border-top: 2px solid #c28485;
-		border-left: 2px solid #c28485;
+		border-top: 2px solid #e5a4b3;
+		border-left: 2px solid #e5a4b3;
+		border-top-left-radius: 10px;
 	}
 	a.button:before {
 		bottom: -1px;
 		right: -1px;
-		border-bottom: 2px solid #c28485;
-		border-right: 2px solid #c28485;
+		border-bottom: 2px solid #e5a4b3;
+		border-right: 2px solid #e5a4b3;
+		border-bottom-right-radius: 10px;
 	}
 	a.button:hover {
-		border-top-right-radius: 0px;
-		border-bottom-left-radius: 0px;
-		text-decoration: none;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		color: #e5a4b3;
 	}
-	a.button:hover:before,
+	a.button:hover:before {
+		border-bottom-color: #ead7a3;
+		border-right-color: #ead7a3;
+	}
 	a.button:hover:after {
-		width: 100%;
-		height: 100%;
-	}
-	@media (max-width: 768px) {
-		.grid-container {
-			align-items: initial;
-			grid-template-columns: 1.2fr 1fr;
-		}
-	}
-
-	@media (max-width: 424px) {
-		.grid-container {
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 2fr;
-		}
-
-		.grid-container > div:first-of-type {
-			grid-row: 2;
-		}
-	}
-
-	@media (max-width: 320px) {
-		.grid-container {
-			grid-template-rows: 0.5fr 1.5fr;
-		}
+		border-top-color: #ead7a3;
+		border-left-color: #ead7a3;
 	}
 </style>
