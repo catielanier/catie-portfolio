@@ -248,7 +248,7 @@
 		background: #fff9f5;
 		color: #3a2f2f;
 		border: 0;
-		border-radius: 5px;
+		border-radius: 12px;
 		padding: 14px 16px;
 		outline: none;
 		border: 1px solid #c9c6d9;
@@ -257,14 +257,14 @@
 		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
 		transition: 0.5 all ease-in-out;
 	}
-	input:focus,
-	textarea:focus {
+	input:hover,
+	textarea:hover {
 		outline: none;
 		border: 1px solid #e5a4b3;
 	}
 	input:focus-visible,
 	textarea:focus-visible {
-		border-color: var(--pink);
+		border-color: #e5a4b3;
 		box-shadow: 0 0 0 3px color-mix(in oklab, #ead7a3 60%, transparent);
 		outline: none;
 		background: white;
@@ -272,6 +272,7 @@
 	input::placeholder,
 	textarea::placeholder {
 		color: color-mix(in oklab, #3a2f2f 55%, white);
+		opacity: 0.85;
 	}
 
 	button {
@@ -283,7 +284,7 @@
 		font-family: "Comfortaa", serif;
 		text-transform: uppercase;
 		font-size: 1.6rem;
-		border-radius: 10px;
+		border-radius: 12px;
 		border: 0;
 		transition: all 1s;
 		color: #3a2f2f;
