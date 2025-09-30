@@ -92,7 +92,6 @@
 		width: 45px;
 		height: 45px;
 		z-index: 5;
-		background: #6b4e5c;
 		border-radius: 5px;
 	}
 
@@ -162,7 +161,7 @@
 			display: block;
 			position: fixed;
 			top: 0px;
-			left: 0px;
+			right: 0px;
 		}
 	}
 </style>

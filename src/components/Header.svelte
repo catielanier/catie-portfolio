@@ -1,14 +1,19 @@
 <script>
-	export let isKr;
+	export let isKr = false;
 	import catie from "../assets/catie.jpg";
 </script>
 
 <header id="home">
 	<div class="container">
-		<div>
+		<div class="hero-media">
+			<div class="header-image">
+				<img src={catie} alt="Portrait of Catie Lanier" />
+			</div>
+		</div>
+
+		<div class="hero-copy">
 			<h1>Software Engineer · Creative Developer</h1>
 
-			<!-- ✅ replace your long bio with this single value line -->
 			<h2 class="tagline">
 				Building fast, clean apps with a touch of elegance — serving the Greater
 				Toronto Area and beyond.
@@ -31,7 +36,9 @@
 
 			<p class="hero-links">
 				{#if !isKr}
-					<a href="/resume.pdf" target="_blank"><span>View my resume</span></a>
+					<a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+						><span>View my resume</span></a
+					>
 					<span aria-hidden="true">·</span>
 				{/if}
 				<a href="#portfolio"><span>View my work</span></a>
@@ -39,128 +46,116 @@
 				<a href="#contact"><span>Work with me</span></a>
 			</p>
 		</div>
-
-		<div>
-			<div class="header-image">
-				<img src={catie} alt="Catie Lanier" />
-			</div>
-		</div>
 	</div>
 </header>
 
 <style>
-	/* keep your font family + sizes, but remove the fixed height */
-	h1 {
-		font-family: "Cormorant Garamond", serif;
-		font-size: 4.3rem;
-		line-height: 1.8;
-		/* height: 7.2rem;  ⟵ remove this to stop clipping/awkward spacing */
-		margin: 0 0 0.25rem;
+	:root {
+		--bg-blush: #fdecef;
+		--text: #3a2f2f;
+		--mauve: #6b4e5c;
+		--pink: #e5a4b3;
+		--gold: #ead7a3;
+		--container-w: 1280px;
+		--space-section: clamp(32px, 6vw, 88px);
+		--gap: clamp(16px, 3.5vw, 32px);
 	}
 
 	header {
-		background: #fdecef;
+		background: var(--bg-blush);
+		padding-block: var(--space-section);
 	}
-
 	.container {
-		max-width: 1280px;
+		max-width: var(--container-w);
 		margin: 0 auto;
-		padding-top: 120px;
+		padding-inline: clamp(16px, 4vw, 40px);
 		display: grid;
-		grid-template-columns: 2fr 1fr;
-		grid-gap: 30px;
+		grid-template-columns: 1fr;
+		gap: var(--gap);
 		align-items: center;
 	}
 
-	p {
-		font-family: "Work Sans", sans-serif;
+	/* image sits on top by default (mobile-first) */
+	.hero-media {
+		order: 1;
+		text-align: center;
+	}
+	.hero-copy {
+		order: 2;
 	}
 
-	h2.tagline {
-		font-size: 2rem;
+	h1 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: clamp(28px, 5vw, 44px);
+		line-height: 1.25;
+		font-weight: 700;
+		margin: 0 0 0.5rem 0;
+		color: var(--text);
+	}
+	.tagline {
 		font-family: "Work Sans", sans-serif;
-		line-height: 2.2rem;
-		color: #6b4e5c;
+		font-size: clamp(16px, 2.4vw, 20px);
+		line-height: 1.45;
+		color: var(--mauve);
+		font-weight: 600;
+		margin: 0 0 0.9rem 0;
+	}
+	p {
+		font-family: "Work Sans", sans-serif;
+		font-size: clamp(16px, 1.25vw, 18px);
+		line-height: 1.65;
+		color: var(--text);
+		margin: 0.65rem 0;
+		max-width: 68ch;
 	}
 
 	.hero-links {
-		font-family: "Work Sans", sans-serif; /* matches your portfolio link text */
-		font-size: 2rem;
-		margin-top: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px 18px;
+		align-items: center;
+		margin-top: 0.75rem;
+		font-size: clamp(14px, 1.6vw, 18px);
 	}
-
 	.hero-links a {
-		text-decoration: underline;
-		color: #f7a3b4;
+		text-decoration: none;
+		position: relative;
+		color: var(--pink);
 	}
 	.hero-links a span {
-		color: #6b4e5c;
-		transition: all 0.3s ease-in-out;
+		color: var(--mauve);
+		transition: color 0.2s ease;
 	}
-
 	.hero-links a:hover span {
-		color: #f7a3b4; /* lighter pink on hover */
+		color: var(--pink);
+	}
+	.hero-links span[aria-hidden] {
+		opacity: 0.6;
 	}
 
-	img {
-		width: 100%;
-		border-radius: 50%;
-	}
 	.header-image {
-		border-radius: 45%;
+		max-width: min(420px, 85vw);
+		margin-inline: auto;
+	}
+	.header-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 	}
 
-	/* your existing responsive rules, with height removed */
-	@media (max-width: 1024px) {
-		h1 {
-			font-size: 5.7rem;
+	/* tablet+ two-column layout: put text left, image right */
+	@media (min-width: 900px) {
+		.container {
+			grid-template-columns: 1.4fr 1fr;
+			align-items: center;
 		}
-	}
-
-	@media (max-width: 768px) {
-		header {
-			grid-template-columns: 1.5fr 1fr;
-			align-items: initial;
+		.hero-media {
+			order: 2;
+			text-align: right;
 		}
-		h1 {
-			font-size: 3.5rem;
-		}
-	}
-
-	@media (max-width: 424px) {
-		h1 {
-			font-size: 2.9rem;
-		}
-		header {
-			padding-top: 50px;
-			grid-template-rows: 1fr 2fr;
-			grid-template-columns: 100%;
-			grid-auto-flow: dense;
-			margin: 0 auto;
-			grid-gap: 0;
-		}
-		header div:first-of-type {
-			grid-row: 2;
-		}
-		header div:last-child {
-			text-align: center;
-		}
-		img {
-			transform: none;
-		}
-	}
-
-	@media (max-width: 375px) {
-		h1 {
-			font-size: 2.8rem;
-		}
-	}
-	@media (max-width: 320px) {
-		h1 {
-			font-size: 2.3rem;
-		}
-		header {
-			grid-template-rows: 0.5fr 2fr;
+		.hero-copy {
+			order: 1;
 		}
 	}
 </style>
