@@ -58,7 +58,7 @@
 	<div class="container">
 		<h2>Portfolio</h2>
 		{#each portfolioPieces as piece, index}
-			<div class="grid-container" key={index}>
+			<div class="grid-container">
 				<div>
 					<h3>{piece.title}</h3>
 					<p class="tools">{piece.tools}</p>
@@ -101,10 +101,11 @@
 		margin: 0 auto;
 	}
 	h3 {
-		font-family: "Comfortaa", sans-serif;
+		font-family: "Cormorant Garamond", serif;
 		font-size: 3.2rem;
 		font-weight: 700;
 		margin-bottom: 0;
+		color: #6b4e5c;
 	}
 	.grid-container {
 		margin: 20px auto;
@@ -119,7 +120,7 @@
 		color: #6b4e5c;
 	}
 	.link {
-		font-family: "Arvo", serif;
+		font-family: "Work Sans", sans-serif;
 		font-size: 2rem;
 		margin-bottom: 25px;
 	}
@@ -146,9 +147,9 @@
 		position: relative;
 		padding: 15px 20px;
 		background: #fdecef;
-		font-family: "Comfortaa", serif;
+		font-family: "Work Sans", sans-serif;
 		text-transform: uppercase;
-		font-size: 1.6rem;
+		font-size: 1.7rem;
 		border-radius: 10px;
 		border: 0;
 		transition: all 1s;

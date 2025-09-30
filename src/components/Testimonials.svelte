@@ -60,7 +60,7 @@
 		text-align: right;
 		font-style: italic;
 		margin-top: 1rem;
-		font-family: "Neuton", serif;
-		font-size: 1.7rem;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 1.9rem;
 	}
 </style>

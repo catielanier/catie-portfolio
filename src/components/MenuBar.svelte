@@ -63,10 +63,10 @@
 		padding: 0 20px;
 	}
 	ul {
-		font-family: "Neuton", sans-serif;
+		font-family: "Work Sans", sans-serif;
 		font-weight: 700;
 		list-style: none;
-		font-size: 2.4rem;
+		font-size: 1.9rem;
 		display: flex;
 		background: #6b4e5c;
 		justify-content: space-around;
@@ -140,7 +140,7 @@
 		display: flex;
 		height: 90vh;
 		width: 100%;
-		font-family: "Neuton", serif;
+		font-family: "Work Sans", sans-serif;
 		text-transform: capitalize;
 		font-size: 2.8rem;
 		flex-direction: column;

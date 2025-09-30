@@ -108,8 +108,8 @@
 		margin-bottom: 2.5rem;
 	}
 	.category h3 {
-		font-family: "Comfortaa", sans-serif;
-		font-size: 2.1rem;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 2.5rem;
 		margin-bottom: 1rem;
 		letter-spacing: 0.05em;
 		color: #333;

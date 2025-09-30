@@ -60,8 +60,8 @@
 <style>
 	/* keep your font family + sizes, but remove the fixed height */
 	h1 {
-		font-family: "Comfortaa", sans-serif;
-		font-size: 3.8rem;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 4.3rem;
 		line-height: 1.8;
 		/* height: 7.2rem;  ⟵ remove this to stop clipping/awkward spacing */
 		margin: 0 0 0.25rem;
@@ -81,14 +81,19 @@
 		align-items: center;
 	}
 
+	p {
+		font-family: "Work Sans", sans-serif;
+	}
+
 	h2.tagline {
-		font-size: 2.5rem;
-		line-height: 2.5rem;
+		font-size: 2rem;
+		font-family: "Work Sans", sans-serif;
+		line-height: 2.2rem;
 		color: #6b4e5c;
 	}
 
 	.hero-links {
-		font-family: "Arvo", serif; /* matches your portfolio link text */
+		font-family: "Work Sans", sans-serif; /* matches your portfolio link text */
 		font-size: 2rem;
 		margin-top: 1rem;
 	}

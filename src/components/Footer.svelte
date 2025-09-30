@@ -27,8 +27,7 @@
 		width: 100%;
 		max-width: 1280px;
 		background: #6b4e5c;
-		font-family: "Neuton", sans-serif;
-		font-weight: 700;
+		font-family: "Work Sans", sans-serif;
 		color: #fff9f5;
 		font-size: 2rem;
 		border-radius: 5px;

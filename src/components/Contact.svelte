@@ -93,7 +93,7 @@
 							rel="noopener noreferrer"
 							class="calendly"
 						>
-							Schedule a free call with me
+							<span> Schedule a free call with me </span>
 						</a>.
 					</p>
 				{/if}
@@ -161,7 +161,8 @@
 							required
 							cols="30"
 							rows="10"
-						/>
+						></textarea>
+						<!-- honeypot fields -->
 						<input type="hidden" name="ip" bind:value={ip} />
 						<input
 							type="hidden"
@@ -227,8 +228,7 @@
 		grid-template-columns: 1fr 1fr;
 	}
 	.email {
-		font-family: "Comfortaa", sans-serif;
-		font-size: 1.7rem;
+		font-family: "Work Sans", sans-serif;
 		margin-top: 35px;
 	}
 	.contact-gap {
@@ -252,8 +252,8 @@
 		padding: 14px 16px;
 		outline: none;
 		border: 1px solid #c9c6d9;
-		font-family: "Arvo", serif;
-		font-size: 1.8rem;
+		font-family: "Work Sans", sans-serif;
+		font-size: 1.9rem;
 		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
 		transition: 0.5 all ease-in-out;
 	}
@@ -281,9 +281,9 @@
 		position: relative;
 		padding: 15px 20px;
 		background: #fdecef;
-		font-family: "Comfortaa", serif;
+		font-family: "Work Sans", sans-serif;
 		text-transform: uppercase;
-		font-size: 1.6rem;
+		font-size: 1.7rem;
 		border-radius: 12px;
 		border: 0;
 		transition: all 1s;
@@ -340,11 +340,16 @@
 
 	a.calendly {
 		text-decoration: underline;
-		color: #c28485; /* your rose accent — darker, readable */
+		color: #f7a3b4; /* your rose accent — darker, readable */
 		transition: color 0.2s ease-in-out;
 	}
 
-	a.calendly:hover {
+	a.calendly span {
+		color: #6b4e5c;
+		transition: all 0.3s ease-in-out;
+	}
+
+	a.calendly:hover span {
 		color: #f7a3b4; /* lighter pink on hover */
 	}
 
