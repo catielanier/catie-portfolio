@@ -71,8 +71,9 @@
 		background: #6b4e5c;
 		justify-content: space-around;
 		margin: 0;
-		padding: 15px 0 20px;
+		padding: 15px 0;
 		border-radius: 5px;
+		letter-spacing: 0.5px;
 	}
 	li {
 		text-transform: capitalize;
