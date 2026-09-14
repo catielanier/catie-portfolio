@@ -21,7 +21,6 @@
 			tools: "Go / Cobra / Bubble Tea / Lip Gloss / Gentoo Linux / Portage",
 			description:
 				"This app is a TUI frontend for Gentoo Portage, aimed to ease the barrier of entry into the distribution. It checks chosen atoms for package masking, license acceptance, and allows users to read and choose which USE flags to build the atom with before calculating the dependencies and using emerge to install.",
-			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "portico",
 			file: portico,
 		},
@@ -58,6 +57,7 @@
 			tools: "React / TypeScript / Hooks / CSS / Python / Flask / MongoDB",
 			description:
 				"This app allows you to track your job applications more easily. With this app, you can create, update and delete job applications and their statuses, as well as track the job posting and your contact within the company. It also shows you statistics on your job hunt.",
+			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "job-hunt",
 			file: jobHunt,
 		},
