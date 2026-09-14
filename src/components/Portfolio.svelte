@@ -4,6 +4,7 @@
 	import jobHunt from "../assets/job-hunt.png";
 	import whiffCityScoreboard from "../assets/whiff-city-scoreboard.png";
 	import smrt from "../assets/smrt.png";
+        import portico from "../assets/portico.png"
 
 	const portfolioPieces = [
 		{
@@ -16,6 +17,15 @@
 			file: elixir,
 		},
 		{
+			title: "Portico",
+			tools: "Go / Cobra / Bubble Tea / Lip Gloss / Gentoo Linux / Portage",
+			description:
+				"This app is a TUI frontend for Gentoo Portage, aimed to ease the barrier of entry into the distribution. It checks chosen atoms for package masking, license acceptance, and allows users to read and choose which USE flags to build the atom with before calculating the dependencies and using emerge to install.",
+			previewLink: "https://job-hunt.catielanier.ca",
+			githubRepo: "portico",
+			file: portico,
+		},
+	        {
 			title: "Whiff City Scoreboard",
 			tools: "Svelte / TypeScript / Firebase / Websockets / CSS",
 			description:
@@ -74,7 +84,8 @@
 					<h3>{piece.title}</h3>
 					<p class="tools">{piece.tools}</p>
 					<p>{piece.description}</p>
-					<p class="links">
+					{#if piece.previewLink}
+					    <p class="links">
 						<a
 							href={piece.previewLink}
 							target="_blank"
@@ -82,7 +93,8 @@
 						>
 							<span>View the project online.</span>
 						</a>
-					</p>
+					    </p>
+					{/if}
 					<p class="links">
 						<a
 							href={`https://github.com/catielanier/${piece.githubRepo}`}
