@@ -58,7 +58,6 @@
 			tools: "React / TypeScript / Hooks / CSS / Python / Flask / MongoDB",
 			description:
 				"This app allows you to track your job applications more easily. With this app, you can create, update and delete job applications and their statuses, as well as track the job posting and your contact within the company. It also shows you statistics on your job hunt.",
-			previewLink: "https://job-hunt.catielanier.ca",
 			githubRepo: "job-hunt",
 			file: jobHunt,
 		},
