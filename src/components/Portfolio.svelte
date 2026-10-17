@@ -4,9 +4,26 @@
 	import jobHunt from "../assets/job-hunt.png";
 	import whiffCityScoreboard from "../assets/whiff-city-scoreboard.png";
 	import smrt from "../assets/smrt.png";
-        import portico from "../assets/portico.png"
+	import portico from "../assets/portico.png"
+	import fuxi from '../assets/fuxi.png'
 
 	const portfolioPieces = [
+		{
+			title: "Fuxi",
+			tools: "Vue / Firebase / CSS / PWA",
+			description: "This app is a Mandarin vocabulary learning tool I built for self-study of Chinese. It features 2,800 vocabulary cards across 28 themed decks, with randomized reviews that test users on both Pinyin pronunciation and English definitions. It includes a custom Pinyin input converter, offline vocabulary access through PWA caching, and printable flashcards for physical study. Users can practice without an account, or register to save their results and track their progress over time.",
+			previewLink: "https://fuxi.catielanier.ca",
+			githubRepo: "fuxi",
+			file: fuxi
+		},
+		{
+			title: "Portico",
+			tools: "Go / Cobra / Bubble Tea / Lip Gloss / Gentoo Linux / Portage",
+			description:
+				"This app is a TUI frontend for Gentoo Portage, aimed to ease the barrier of entry into the distribution. It checks chosen atoms for package masking, license acceptance, and allows users to read and choose which USE flags to build the atom with before calculating the dependencies and using emerge to install.",
+			githubRepo: "portico",
+			file: portico,
+		},
 		{
 			title: "Elixir Day Spa",
 			tools: "Svelte / Firebase / CSS",
@@ -15,14 +32,6 @@
 			previewLink: "https://elixirdayspa.ca",
 			githubRepo: "elixir-day-spa",
 			file: elixir,
-		},
-		{
-			title: "Portico",
-			tools: "Go / Cobra / Bubble Tea / Lip Gloss / Gentoo Linux / Portage",
-			description:
-				"This app is a TUI frontend for Gentoo Portage, aimed to ease the barrier of entry into the distribution. It checks chosen atoms for package masking, license acceptance, and allows users to read and choose which USE flags to build the atom with before calculating the dependencies and using emerge to install. Currently available in the Gentoo GURU overlay as app-portage/portico.",
-			githubRepo: "portico",
-			file: portico,
 		},
 	        {
 			title: "Whiff City Scoreboard",
