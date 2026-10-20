@@ -11,7 +11,7 @@
 		{
 			title: "Fuxi",
 			tools: "Vue / Firebase / Python / CSS / PWA",
-			description: "This app is a Mandarin vocabulary learning tool I built for self-study of Chinese. It features 2,800 vocabulary cards across 28 themed decks, with randomized reviews that test users on both Pinyin pronunciation and English definitions. It includes a custom Pinyin input converter, offline vocabulary access through PWA caching, listening quizzes, and printable flashcards for physical study. Users can practice without an account, or register to save their results and track their progress over time. It also uses a scraper when new decks are introduced to download pronunciation audio.",
+			description: "Fuxi is a Mandarin vocabulary learning app I built for self-study, with 2,800 vocabulary cards across 28 themed decks. Randomized reviews test both Pinyin pronunciation and English definitions, with custom Pinyin input, listening quizzes, printable flashcards, and offline access through PWA caching. Users can practice anonymously or create an account to save results and track progress over time. A custom scraper downloads pronunciation audio as new decks are added.",
 			previewLink: "https://fuxi.catielanier.ca",
 			githubRepo: "fuxi",
 			file: fuxi
